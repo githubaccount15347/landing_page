@@ -1,0 +1,1784 @@
+!!!
+%html
+  %head
+    %meta{ :charset => "utf-8" }
+    %title
+      = I18n.t(:page_title)
+    %meta{ :name => "description", :content => "EiraCube is the world's first robo-powered pop-up store. It gives online merchants a simple way to sell products in shopping malls globally."}
+    %meta{ :name => "keywords", :content => "Eiracube, robo-powered, pop-up store, online merchant, sell products in shopping mall, product vending machine"}
+
+
+    %link{:href => '/apple-icon-57x57.png', :rel => "apple-touch-icon", :sizes => "57x57"}
+    %link{:href => '/apple-icon-60x60.png', :rel => "apple-touch-icon", :sizes => "60x60"}
+    %link{:href => '/apple-icon-72x72.png', :rel => "apple-touch-icon", :sizes => "72x72"}
+    %link{:href => '/apple-icon-76x76.png', :rel => "apple-touch-icon", :sizes => "76x76"}
+    %link{:href => '/apple-icon-114x114.png', :rel => "apple-touch-icon", :sizes => "114x114"}
+    %link{:href => '/apple-icon-120x120.png', :rel => "apple-touch-icon", :sizes => "120x120"}
+    %link{:href => '/apple-icon-144x144.png', :rel => "apple-touch-icon", :sizes => "144x144"}
+    %link{:href => '/apple-icon-152x152.png', :rel => "apple-touch-icon", :sizes => "152x152"}
+    %link{:href => '/apple-icon-180x180.png', :rel => "apple-touch-icon", :sizes => "180x180"}
+    %link{:href => '/android-icon-192x192.png', :rel => "icon", :sizes => "192x192", :type => "image/png"}
+    %link{:href => '/favicon-32x32.png', :rel => "icon", :sizes => "32x32", :type => "image/png"}
+    %link{:href => '/favicon-96x96.png', :rel => "icon", :sizes => "96x96", :type => "image/png"}
+    %link{:href => '/favicon-16x16.png', :rel => "icon", :sizes => "16x16", :type => "image/png"}
+    %link{:href => '/manifest.json', :rel => "manifest"}
+    %meta{:content => "#ffffff", :name => "msapplication-TileColor"}
+    %meta{:content => '/ms-icon-144x144.png', :name => "msapplication-TileImage"}
+    %meta{:content => "#ffffff", :name => "theme-color"}
+    /- styles_file = "/#{locals[:styles]}"
+    /- test = locals[:test]
+    %link{ :href => '/index.css', :rel => "stylesheet", :type => "text/css"}
+    /- @mobile_device = true
+    - if @mobile_device
+      %link{:href => '/index_mobile.css', :rel => "stylesheet", :type => "text/css"}
+    %link{ :href => '/jquery.fancybox.css', :rel => "stylesheet", :type => "text/css"}
+    %link{ :href => '/slick.css', :rel => "stylesheet", :type => "text/css"}
+
+    / Google Tag Manager
+    :javascript
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-N954NBP');
+    / End Google Tag Manager
+
+    %script{ :src => "https://www.googletagmanager.com/gtag/js?id=UA-112757960-1"}
+    :javascript
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-112757960-1');
+
+    / %script{:async => "", :crossorigin => "anonymous", :src => "//player.h-cdn.com/loader.js?customer=hc_78903d8c"}
+    %script{:src => "//player2.h-cdn.com/hola_player.js?customer=hc_78903d8c"}
+
+    - if @mobile_device
+      - case I18n.locale
+      - when :kr
+        :css
+          #buy_tokens_big_button {
+            font-size: 52px;
+          }
+          #benefits_container_wrapper {
+            height: 924px !important;
+          }
+      - when :es
+        :css
+          #buy_tokens_big_button {
+            font-size: 62px;
+      - when :jp
+        :css
+          #buy_token_button_in_menu {
+            font-size: 48px;
+          }
+          #buy_tokens_big_button {
+            font-size: 58px;
+          }
+          #benefits_container_wrapper {
+            height: 952px !important;
+          }
+    - else
+      - case I18n.locale
+      - when :kr
+        :css
+          #buy_tokens_big_button {
+            font-size: 22px;
+          }
+          #benefits_container_wrapper {
+            height: 748px !important;
+          }
+      - when :jp
+        :css
+          #buy_token_button_in_menu {
+            font-size: 12px;
+          }
+          #solution_text {
+            font-size: 14px;
+          }
+          #benefits_container_wrapper {
+            height: 770px !important;
+          }
+
+
+
+  %body
+    / #how_it_works_overlay{onclick: "toggleHowItWorksPopup();"}
+    / #how_it_works_popup
+    /   %video.video-js.vjs-default-skin#how_it_works_video_popup{:controls => "", :width => "672", :height => "378"}
+    /     %source{:src => "/how_it_works.mp4#t=0.5", :type => "video/mp4"}
+    / Google Tag Manager (noscript)
+    %noscript
+      %iframe{:height => "0", :src => "https://www.googletagmanager.com/ns.html?id=GTM-N954NBP", :style => "display:none;visibility:hidden", :width => "0"}
+    / End Google Tag Manager (noscript)
+    #header_container_wrapper_2.container_wrapper
+      #header_container_wrapper.container_wrapper
+        #header_inner_container.inner_container
+          #ico_logo{onclick: "location.href='/';"}
+          #ico_menu
+            %ul
+              %li
+                %a{href: "#collected_for_now"}
+                  = I18n.t(:top_menu_tokens)
+              %li
+                %a{href: "#company"}
+                  = I18n.t(:top_menu_how_it_works)
+              %li
+                %a{href: "#advisers_block"}
+                  = I18n.t(:top_menu_team)
+              %li
+                %a{href: "#roadmap_is_clear_inner_container"}
+                  = I18n.t(:top_menu_roadmap)
+              %li
+                %a{href: "#documents_inner_container"}
+                  = I18n.t(:top_menu_documents)
+              %li
+                %a{href: "https://bitcointalk.org/index.php?topic=2856497"}
+                  = I18n.t(:top_menu_bounty)
+          %a{href: 'http://sale.eiracube.io', target: '_blank'}
+            #buy_token_button_in_menu
+              = I18n.t(:top_menu_buy_tokens)
+      
+
+
+
+    #main_block_container_wrapper.container_wrapper
+      #main_block_inner_container.inner_container
+        
+        #change_language_container
+          - if I18n.locale != :en
+            %a{href: "/en/"} EN
+          - else
+            .active_lang EN
+          - if I18n.locale != :kr
+            %a{href: "/kr/"} KR
+          - else
+            .active_lang KR
+          - if I18n.locale != :es
+            %a{href: "/es/"} ES
+          - else
+            .active_lang ES
+          - if I18n.locale != :jp
+            %a{href: "/jp/"} JP
+          - else
+            .active_lang JP
+          - if I18n.locale != :cn
+            %a{href: "/cn/"} CN
+          - else
+            .active_lang CN
+          - if I18n.locale != :pt
+            %a{href: "/pt/"} PT
+          - else
+            .active_lang PT
+
+        #main_text_block
+
+          %h2
+            = I18n.t(:main_block_h2_1)
+            %br
+            = I18n.t(:main_block_h2_2)
+          %p
+            = I18n.t(:main_block_text_1)
+            %br
+            = I18n.t(:main_block_text_2) 
+            %br
+            = I18n.t(:main_block_text_3)
+          #block_with_ratings
+            %a{href: 'https://icobench.com/ico/eiracube/ratings#ratings', target: '_blank'}
+              #icobench_rating.rating_mini_block
+                #icobench_rating_mini_pic.rating_mini_pic
+                .mini_star
+                .mini_rating
+                  4.9
+            %a{href: 'https://www.trackico.io/ico/eiracube/', target: '_blank'}              
+              #trackico_rating.rating_mini_block
+                #trackico_rating_mini_pic.rating_mini_pic
+                .mini_star
+                .mini_rating
+                  5.0
+            / #mini_video_block{onclick: "toggleHowItWorksPopup();"}
+            %a{href: 'https://player.vimeo.com/video/257964307', class: 'fancybox fancybox.iframe'}
+              #mini_video_block
+                #mini_video
+                #mini_video_text_blck
+                  = I18n.t(:main_block_mini_video_text_1)
+                  %br
+                  %b 
+                    = I18n.t(:main_block_mini_video_text_2)
+        #main_picture_block
+          //#main_picture
+          //#main_picture_cube_robot
+
+
+    #money_block_container_wrapper.container_wrapper
+      #money_block_inner_container.inner_container
+
+        #benefits_and_social
+
+          #social_icons
+            %a{href: 'https://t.me/eiracubeico', target: '_blank'}
+              #telegramm_block     
+                #telegramm_icon
+                #telegramm_text
+                  = I18n.t(:social_icons_telegram_text_1)
+                  %br
+                  = I18n.t(:social_icons_telegram_text_2)
+                  %br
+                  = I18n.t(:social_icons_telegram_text_3)
+            %a{href: '/EiraCube_WP.pdf', target: '_blank'}
+              #whitepaper_block
+                #whitepaper_icon
+                #whitepaper_text
+                  = I18n.t(:social_icons_whitepaper_text_1)
+                  %br
+                  = I18n.t(:social_icons_whitepaper_text_2)
+            %a{href: 'https://twitter.com/EiraCube', target: '_blank'}             
+              #twitter_icon
+            %a{href: 'https://www.facebook.com/EiraCube', target: '_blank'}            
+              #facebook_icon
+            %a{href: 'https://medium.com/@eiracube', target: '_blank'}
+              #medium_icon
+            %a{href: 'https://bitcointalk.org/index.php?topic=2834248.0', target: '_blank'}
+              #bitcointalk_icon
+          #collected_for_now
+            #collected_for_now_text
+              = I18n.t(:money_block_collected_for_now)
+            #collected_for_now_number
+              $ 0
+          #thermometer
+            .thermometerContainer
+              .thermometerMinMaxValue
+                #thermometerSoftCapValue
+                #thermometerHardCapValue
+                  
+              #thermometerValueContainer
+                #softCapMark
+                #hardCapMark
+                .thermometerValue
+              .thermometerTargetTitles
+                #thermometerSoftCapTitle
+                  #thermometerSoftCapSuccess
+                  = I18n.t(:thermometer_soft_cap_tite_2)
+                #thermometerHardCapTitle
+                  = I18n.t(:thermometer_hard_cap_tite_1)
+                  %br
+                  = I18n.t(:thermometer_hard_cap_tite_2)
+                  %br
+                  = I18n.t(:thermometer_hard_cap_tite_3)
+
+        #timer_money_thermometer_block
+          #timer_name
+            = I18n.t(:timer_name)
+          #timer_block
+            .number_text_clock_block
+              #timer_days.number_clock
+                0
+              .text_clock
+                = I18n.t(:timer_days)
+            .dv_block
+              \:
+            .number_text_clock_block
+              #timer_hours.number_clock
+                0
+              .text_clock
+                = I18n.t(:timer_hours)
+            .dv_block
+              \:
+            .number_text_clock_block
+              #timer_min.number_clock
+                0
+              .text_clock
+                = I18n.t(:timer_min)
+            .dv_block
+              \:
+            .number_text_clock_block
+              #timer_sec.number_clock
+                0
+              .text_clock
+                = I18n.t(:timer_sec)
+
+          %a{href: 'http://sale.eiracube.io', target: '_blank'}
+            #buy_tokens_big_button
+              = I18n.t(:buy_tokens_now_button)
+              #buy_tokens_sale
+                +40%
+          //#money_number
+          //  $ 180 000
+
+    / #our_strength_container_wrapper.container_wrapper
+    /   #our_strength_inner_container.inner_container
+    /     .our_strength_block
+    /       .our_strength_block_head_and_text
+    /         .our_strength_block_head
+    /           Strong
+    /           %br
+    /           team
+    /         .our_strength_block_text
+    /           Professionals with solid industry experience and successes
+    /       .our_strength_block_pics#our_strength_block_team
+    /     .our_strength_block
+    /       .our_strength_block_head_and_text
+    /         .our_strength_block_head
+    /           Retail
+    /           %br
+    /           support
+    /         .our_strength_block_text
+    /           Supported by leading retail companies and experts
+    /       .our_strength_block_pics#our_strength_block_stores
+    /     .our_strength_block
+    /       .our_strength_block_head_and_text
+    /         .our_strength_block_head
+    /           Premier
+    /           %br
+    /           partners
+    /         .our_strength_block_text
+    /           4 of TOP-10 real estate owners (and 100+ in total) confirmed their interest
+    /       .our_strength_block_pics#our_strength_block_retail
+    /     .our_strength_block
+    /       .our_strength_block_head_and_text
+    /         .our_strength_block_head
+    /           Trillion
+    /           %br
+    /           market
+    /         .our_strength_block_text
+    /           Large and fast growing omnichannel industry is ripe for a disruption
+    /       .our_strength_block_pics#our_strength_block_market
+
+    #solution_container_wrapper.container_wrapper
+      #solution_inner_container.inner_container
+        
+        #solution_slider
+          .solution_slide_container
+            .solution_slide#slide_1
+          .solution_slide_container
+            .solution_slide#slide_2
+          .solution_slide_container
+            .solution_slide#slide_3
+          .solution_slide_container
+            .solution_slide#slide_4
+          .solution_slide_container
+            .solution_slide#slide_5
+        %h2
+          = I18n.t(:solution_block_h2)
+        #solution_text
+          = I18n.t(:solution_block_text_1)
+          %br
+          = I18n.t(:solution_block_text_2)
+    #how_it_works_container_wrapper.container_wrapper
+      #how_it_works_inner_container.inner_container
+        %h2 
+          = I18n.t(:how_it_works_block_h2)
+        / %video.video-js.vjs-default-skin#youtube_video_big_block{:controls => "", :width => "560", :height => "315"}
+        /   %source{:src => "/how_it_works.mp4#t=0.5", :type => "video/mp4"}
+        %iframe#how_it_works_video{:allowfullscreen => "", :frameborder => "0", :height => "315", :mozallowfullscreen => "", :src => "https://player.vimeo.com/video/257964307", :webkitallowfullscreen => "", :width => "560"}
+        / %iframe#youtube_video_big_block{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/4qnvEzBKHh0?rel=0", :width => "560"}
+    #challenge_container_wrapper.container_wrapper
+      #challenge_inner_container.inner_container
+        %h2
+          = I18n.t(:challenge_block_h2)
+        #challenge_text
+          = I18n.t(:challenge_block_text)
+        #challenge_blocks
+          .challenge_block
+            .challenge_block_pic#challenge_block_pic_shopping_centres
+            .challenge_block_header
+              = I18n.t(:challenge_block_for_shopping_centres_header)
+            .challenge_block_text
+              = I18n.t(:challenge_block_for_shopping_centres_text)
+          .challenge_block
+            .challenge_block_pic#challenge_block_pic_onliners
+            .challenge_block_header
+              = I18n.t(:challenge_block_for_onliners_header)
+            .challenge_block_text
+              = I18n.t(:challenge_block_for_onliners_text)
+    #iamrobotics_provides_container_wrapper.container_wrapper
+      #iamrobotics_provides_inner_container.inner_container
+        %h2 
+          = I18n.t(:iamrobotics_provides_h2)
+          / IAM Robotics provides the most efficient robot to EiraCube
+        #iamrobotics_provides_iamrobotics_logo
+        %iframe#iamrobotics_provides_video{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/8bJfOn_d5CU"}
+        #iamrobotics_provides_eiracube_logo
+    #benefits_container_wrapper.container_wrapper
+      #benefits_inner_container.inner_container
+        %h2 
+          = I18n.t(:benefits_block_h2)
+        .benefits_block#benefits_owners
+          %h3 
+            = I18n.t(:benefits_block_shopping_centre_owners_header)
+          %ul
+            %li 
+              = I18n.t(:benefits_block_shopping_centre_owners_li_1)
+            %li 
+              = I18n.t(:benefits_block_shopping_centre_owners_li_2)
+            %li 
+              = I18n.t(:benefits_block_shopping_centre_owners_li_3)
+        .benefits_block#benefits_consumers
+          %h3 
+            = I18n.t(:benefits_block_consumers_header)
+          %ul
+            %li 
+              = I18n.t(:benefits_block_consumers_li_1)
+            %li 
+              = I18n.t(:benefits_block_consumers_li_2)
+            %li 
+              = I18n.t(:benefits_block_consumers_li_3)
+        .benefits_block#benefits_merchants
+          %h3 
+            = I18n.t(:benefits_block_online_merchants_header)
+          %ul
+            %li 
+              = I18n.t(:benefits_block_online_merchants_li_1)
+            %li 
+              = I18n.t(:benefits_block_online_merchants_li_2)
+            %li 
+              = I18n.t(:benefits_block_online_merchants_li_3)
+        #benefits_eiracube_logo
+    #hundreds_of_brands_container_wrapper.container_wrapper
+      #hundreds_of_brands_inner_container.inner_container
+        %h2 
+          = I18n.t(:hundreds_of_brands_h2)
+        #hundreds_of_brands_text
+          = I18n.t(:hundreds_of_brands_text)
+        .brand_interest_logo#iamrunbox
+        .brand_interest_logo#unilever
+        .brand_interest_logo#pimax
+        .brand_interest_logo#kodak
+        .brand_interest_logo#hawkin
+        .brand_interest_logo#belkin
+        .brand_interest_logo#expansys
+        .brand_interest_logo#hobbex
+  
+    #real_estate_partners_container_wrapper.container_wrapper
+      #real_estate_partners_inner_container.inner_container
+        %h2
+          = I18n.t(:real_estate_partners_h2)
+
+        #real_estate_text
+          = I18n.t(:real_estate_partners_text_1)
+          %br
+          %br
+          = I18n.t(:real_estate_partners_text_2)
+        #real_estate_partners_blocks
+          .real_estate_partners_blocks_line
+            .real_estate_partners_block
+              .real_estate_partners_block_pic#hammerson_icon
+              .real_estate_partners_block_name
+                = I18n.t(:hammerson_name)
+              .real_estate_partners_block_text
+                = I18n.t(:hammerson_text_1)
+                %br
+                = I18n.t(:hammerson_text_2)
+                %br
+                = I18n.t(:hammerson_text_3)
+                %a.real_estate_partners_stock_link{href: 'http://www.londonstockexchange.com/exchange/searchengine/search.html?q=HMSO', target: '_blank'}
+                  = I18n.t(:hammerson_text_4)
+                %br
+                = I18n.t(:hammerson_text_5)
+            .real_estate_partners_block
+              .real_estate_partners_block_pic#intu_icon
+              .real_estate_partners_block_name
+                = I18n.t(:intu_name)
+              .real_estate_partners_block_text
+                = I18n.t(:intu_text_1)
+                %br
+                = I18n.t(:intu_text_2)
+                %br
+                = I18n.t(:intu_text_3)
+                %a.real_estate_partners_stock_link{href: 'https://www.stockopedia.com/share-prices/intu-properties-LON:INTU/dividends/', target: '_blank'} 
+                  = I18n.t(:intu_text_4)
+                %br
+                = I18n.t(:intu_text_5)
+          .real_estate_partners_blocks_line
+            .real_estate_partners_block
+              .real_estate_partners_block_pic#cushman_and_wakefield_icon
+              .real_estate_partners_block_name
+                = I18n.t(:cushman_and_wakefield_name)
+              .real_estate_partners_block_text
+                = I18n.t(:cushman_and_wakefield_text_1)
+                %br
+                = I18n.t(:cushman_and_wakefield_text_2)
+                %br
+                %a.real_estate_partners_stock_link{href: 'https://www.bloomberg.com/research/stocks/private/snapshot.asp?privcapId=877111', target: '_blank'}
+                  = I18n.t(:cushman_and_wakefield_text_3)
+            .real_estate_partners_block
+              .real_estate_partners_block_pic#british_land_icon
+              .real_estate_partners_block_name
+                = I18n.t(:british_land_name)
+              .real_estate_partners_block_text
+                = I18n.t(:british_land_text_1)
+                %br
+                = I18n.t(:british_land_text_2)
+                %br
+                = I18n.t(:british_land_text_3)
+                %a.real_estate_partners_stock_link{href: 'https://www.sharesmagazine.co.uk/shares/share/BLND', target: '_blank'} 
+                  = I18n.t(:british_land_text_4)
+                %br
+                = I18n.t(:british_land_text_5)
+                %a.real_estate_partners_stock_link{href: 'http://www.britishland.com/our-places/find-a-place#/list/Featured', target: '_blank'}
+                  = I18n.t(:british_land_text_6)
+          .real_estate_partners_blocks_line
+            .real_estate_partners_block
+              .real_estate_partners_block_pic#westfield_icon
+              .real_estate_partners_block_name
+                = I18n.t(:westfield_name)
+              .real_estate_partners_block_text
+                = I18n.t(:westfield_text_1)
+                %br
+                = I18n.t(:westfield_text_2)
+                %br
+                = I18n.t(:westfield_text_3)
+                %a.real_estate_partners_stock_link{href: 'https://www.bloomberg.com/quote/WFD:AU', target: '_blank'} 
+                  = I18n.t(:westfield_text_4)
+                %br
+                = I18n.t(:westfield_text_5)
+            .real_estate_partners_block
+              .real_estate_partners_block_pic#unibail_rodamco_icon
+              .real_estate_partners_block_name
+                = I18n.t(:unibail_rodamco_name)
+              .real_estate_partners_block_text
+                = I18n.t(:unibail_rodamco_text_1)
+                %br
+                = I18n.t(:unibail_rodamco_text_2)
+                %br
+                = I18n.t(:unibail_rodamco_text_3)
+                %a.real_estate_partners_stock_link{href: 'https://www.bloomberg.com/quote/UL:NA', target: '_blank'}
+                  = I18n.t(:unibail_rodamco_text_4)
+                %br
+                = I18n.t(:unibail_rodamco_text_5)
+
+    //#rett_token_sale_container_wrapper.container_wrapper
+    //  #rett_token_sale_inner_container.inner_container
+    //    %h2 RETT TOKEN SALE
+    #rett_token_sale_container_wrapper.container_wrapper
+      #rett_token_sale_inner_container.inner_container
+        %h2 
+          = I18n.t(:rett_token_sale_h2)
+        .rett_text
+          = I18n.t(:rett_token_sale_text)
+
+        %h2
+          = I18n.t(:token_sale_strategy_h2)
+        .active_block
+          .bonus_sale_block
+            = I18n.t(:token_sale_block_1_name)
+          .percent_block
+            .percent_numbers
+              +40 ~ 30%
+            .percent_text
+              = I18n.t(:token_sale_block_1_percent_text)
+          .date_block
+            .date_text
+              = I18n.t(:token_sale_block_1_date_text)
+            .date_from_text
+              = I18n.t(:token_sale_block_1_date_from_text)
+            .date_button_buy{onclick: "location.href='http://sale.eiracube.io';"}
+              = I18n.t(:token_sale_block_1_date_button_buy)
+        .inactive_block
+          .percent_block
+            .percent_numbers
+              +20 ~ 15%
+            .percent_text
+              = I18n.t(:token_sale_block_2_percent_text)
+          .date_block
+            .date_text
+              = I18n.t(:token_sale_block_2_date_text)
+            .date_from_text
+              = I18n.t(:token_sale_block_2_date_from_text)
+        .inactive_block
+          .percent_block
+            .percent_numbers
+              +10 ~ 6%
+            .percent_text
+              = I18n.t(:token_sale_block_3_percent_text)
+          .date_block
+            .date_text
+              = I18n.t(:token_sale_block_3_date_text)
+            .date_from_text
+              = I18n.t(:token_sale_block_3_date_from_text)
+        .inactive_block
+          .percent_block
+            .percent_numbers
+              +5 ~ 1%
+            .percent_text
+              = I18n.t(:token_sale_block_4_percent_text)
+          .date_block
+            .date_text
+              = I18n.t(:token_sale_block_4_date_text)
+            .date_from_text
+              = I18n.t(:token_sale_block_4_date_from_text)
+        .inactive_block
+          .percent_block
+            .percent_numbers
+              0%
+            .percent_text
+              = I18n.t(:token_sale_block_5_percent_text)
+          .date_block
+            .date_text
+              = I18n.t(:token_sale_block_5_date_text)
+            .date_from_text
+              = I18n.t(:token_sale_block_5_date_from_text)
+        #rett_params
+          .rett_param#rett_param_soft_cap
+            .rett_param_name
+              = I18n.t(:rett_param_1_name)
+            .rett_param_value
+              = I18n.t(:rett_param_1_value)
+          .rett_param#rett_param_hard_cap
+            .rett_param_name
+              = I18n.t(:rett_param_2_name)
+            .rett_param_value
+              = I18n.t(:rett_param_2_value)
+          .rett_param#rett_param_token
+            .rett_param_name
+              = I18n.t(:rett_param_3_name)
+            .rett_param_value
+              = I18n.t(:rett_param_3_value)
+          .rett_param#rett_param_token_exchange
+            .rett_param_name
+              = I18n.t(:rett_param_4_name)
+            .rett_param_value
+              = I18n.t(:rett_param_4_value)
+          .rett_param#rett_param_protocol
+            .rett_param_name
+              = I18n.t(:rett_param_5_name)
+            .rett_param_value
+              = I18n.t(:rett_param_5_value)
+          .rett_param#rett_param_decimals
+            .rett_param_name
+              Decimals
+            .rett_param_value
+              18
+        #rett_text_payments
+          = I18n.t(:rett_text_payment_methods)
+          %b BTC
+          \/ 
+          %b ETH
+        #rett_diagramm
+        #rett_diag_legend
+          #rett_diag_legend_header
+            = I18n.t(:rett_diag_legend_header)
+          #rett_diag_legend_text
+            .rett_diag_legend_text_block
+              .rett_diag_legend_text_block_circ#blue4
+              .rett_diag_legend_text_block_text
+                = I18n.t(:rett_diag_legend_text_1)
+            .rett_diag_legend_text_block
+              .rett_diag_legend_text_block_circ#blue3
+              .rett_diag_legend_text_block_text
+                = I18n.t(:rett_diag_legend_text_2)
+            .rett_diag_legend_text_block
+              .rett_diag_legend_text_block_circ#blue2
+              .rett_diag_legend_text_block_text
+                = I18n.t(:rett_diag_legend_text_3)
+            .rett_diag_legend_text_block
+              .rett_diag_legend_text_block_circ#blue1
+              .rett_diag_legend_text_block_text
+                = I18n.t(:rett_diag_legend_text_4)
+        #rett_info_blocks
+          .rett_info_block
+            .rett_info_block_head
+              = I18n.t(:rett_info_block_1_head)
+            .rett_info_block_text
+              = I18n.t(:rett_info_block_1_text)
+          .rett_info_block
+            .rett_info_block_head
+              = I18n.t(:rett_info_block_2_head)
+            .rett_info_block_text
+              = I18n.t(:rett_info_block_2_text_1)
+              %a{:class=>"rett_link", :href=>"/EiraCube_WP.pdf"} 
+                = I18n.t(:white_paper)
+              = I18n.t(:rett_info_block_2_text_2)
+              %a{:class=>"rett_link", :href=>"https://t.me/eiracubeico"}
+                = I18n.t(:rett_info_block_2_text_telegram_channel)
+              = I18n.t(:rett_info_block_2_text_3)
+            
+          .rett_info_block
+            .rett_info_block_head
+              = I18n.t(:rett_info_block_3_head)
+            .rett_info_block_text
+              = I18n.t(:rett_info_block_3_text_1)
+              %a{:class=>"rett_link", :href=>"https://bitcointalk.org/index.php?topic=2856497"} 
+                = I18n.t(:rett_info_block_3_text_bounty)
+              = I18n.t(:rett_info_block_3_text_2)     
+          .rett_info_block
+            .rett_info_block_head
+              = I18n.t(:rett_info_block_4_head)
+            .rett_info_block_text
+              = I18n.t(:rett_info_block_4_text_1)
+        %h2
+          = I18n.t(:brett_token_info_h2)
+        .rett_text
+          = I18n.t(:brett_token_info_text)
+          / Withdraw on the 20th of March, 2018
+        #brett_token_info_blocks
+          .brett_token_info_block
+            .brett_token_info_block_name
+              = I18n.t(:brett_token_info_block_1_name)
+            .brett_token_info_block_value
+              %a{href: 'https://etherscan.io/token/0xac7504c2378adc310749b4adb0e9716f100f90c7', target: '_blank'}
+                0xac7504c2378adc310749b4adb0e9716f100f90c7
+          .brett_token_info_block
+            .brett_token_info_block_name
+              = I18n.t(:brett_token_info_block_2_name)
+            .brett_token_info_block_value
+              %a{href: 'https://github.com/eiracubeico/smartcontract', target: '_blank'}
+                https://github.com/eiracubeico/smartcontract
+        #brett_token_info_code
+          %iframe{id: "ef_YflBLO3LrM", src: "https://ethfiddle.com/services/iframesnippet/YflBLO3LrM", scrolling: "no", frameborder: "0", allowtransparency: "true", class: "ef_embed_iframe", style: "width: 100%; overflow: hidden;"}
+        #rett_more_info_in_wp
+          = I18n.t(:rett_more_info_text)
+          %a{:class=>"rett_link", :href=>"/EiraCube_WP.pdf"}
+            = I18n.t(:white_paper)
+    #the_press_container_wrapper.container_wrapper
+      #the_press_inner_container.inner_container
+        %h2
+          = I18n.t(:the_press_h2)
+        #the_press_blocks
+          %a{href: 'http://www.forbes.ru/tehnologii/341669-zdravstvuy-robot-kak-avtomatizaciya-menyaetsya-reteyl-uzhe-segodnya', target: '_blank'}
+            .the_press_block#forbes
+          %a{href: 'https://secretmag.ru/business/trade-secret/poschitat-vseh-countbox-zarabatyvaet-na-analize-potokov-posetitelej.htm', target: '_blank'}
+            .the_press_block#sekret
+          %a{href: 'http://coin5s.com/content/eiracube-blockshow-asia', target: '_blank'}
+            .the_press_block#coin5s
+          %a{href: 'https://blockshowasia.com/investors', target: '_blank'}
+            .the_press_block#blockshow
+          %a{href: 'http://blog.cpmire.com/metamorphosis-in-retail', target: '_blank'}
+            .the_press_block#cpmire
+          %a{href: 'https://www.f6s.com/eiracube', target: '_blank'}
+            .the_press_block#f6s
+          %a{href: 'http://firrma.ru/data/news/7268/', target: '_blank'}
+            .the_press_block#firrma
+          %a{href: 'https://rb.ru/news/countbox-starttrack/', target: '_blank'}
+            .the_press_block#rusbase
+          %a{href: 'https://lenta.ru/news/2016/07/21/starttrack/', target: '_blank'}
+            .the_press_block#lenta
+          %a{href: 'http://www.iidf.ru/media/articles/accelerator/8-statey-6-video-int-market/', target: '_blank'}
+            .the_press_block#frii
+          %a{href: 'http://crowdsourcing.ru/article/_550_000_privlek_na_platforme_starttrack_rossijskij_razrabotchik_countbox_', target: '_blank'}
+            .the_press_block#crowdsourcing
+          %a{href: 'http://profashion.ru/analytics/149017/', target: '_blank'}
+            .the_press_block#profashion
+          %a{href: 'http://smartnews.ru/business/companies/19379.html', target: '_blank'}
+            .the_press_block#smartnews
+
+    #conference_events_container_wrapper.container_wrapper
+      #conference_events_inner_container.inner_container
+        %h2
+          = I18n.t(:conference_events_h2)
+        #conference_events_blocks
+          .conference_events_block
+            .conference_events_pic#future_tech
+            .conference_events_name
+              FutureTech
+            .conference_events_date_city
+              = I18n.t(:conference_events_1_city)
+              %br
+              = I18n.t(:conference_events_1_date)
+            .conference_events_text
+              = I18n.t(:conference_events_1_text)
+            .conference_events_links
+              %a{:class=>"conference_link", :href=>"https://futuretech.live/"} 
+                = I18n.t(:conference_events_1_link_1)
+              %a{:class=>"conference_link", :href=>"https://www.facebook.com/FutureTechSPB/"} 
+                = I18n.t(:conference_events_1_link_2)
+              %a{:class=>"conference_link", :href=>"https://t.me/cryp2shark/127"} 
+                = I18n.t(:conference_events_1_link_3)
+          .conference_events_block
+            .conference_events_pic#blockchain_summit
+            .conference_events_name
+              Blockchain Summit
+            .conference_events_date_city              
+              = I18n.t(:conference_events_2_city)
+              %br
+              = I18n.t(:conference_events_2_date)
+            .conference_events_text
+              = I18n.t(:conference_events_2_text)
+            .conference_events_links
+              %a{:class=>"conference_link", :href=>"https://blockchainsummit.ch/"} 
+                = I18n.t(:conference_events_2_link_1)
+              %a{:class=>"conference_link", :href=>"https://www.facebook.com/blockchaincompetition"}
+                = I18n.t(:conference_events_2_link_2)
+              %a{:class=>"conference_link", :href=>"https://innmind.com/articles/884"} 
+                = I18n.t(:conference_events_2_link_3)
+              %a{:class=>"conference_link", :href=>"https://medium.com/eiracube/eiracube-visited-blockchain-summit-fbea488aedbe"}
+                = I18n.t(:conference_events_2_link_4)
+          .conference_events_block
+            .conference_events_pic#blockshow_asia
+            .conference_events_name
+              BlockShow Asia
+            .conference_events_date_city
+              = I18n.t(:conference_events_3_city)
+              %br
+              = I18n.t(:conference_events_3_date)
+            .conference_events_text
+              = I18n.t(:conference_events_3_text)
+            .conference_events_links
+              %a{:class=>"conference_link", :href=>"https://blockshowasia.com/"}
+                = I18n.t(:conference_events_3_link_1)
+              %a{:class=>"conference_link", :href=>"https://www.facebook.com/events/1090981037671990/"}
+                = I18n.t(:conference_events_3_link_2)
+              %a{:class=>"conference_link", :href=>"https://cointelegraph.com/news/blockshow-asia-everything-you-missed"}
+                = I18n.t(:conference_events_3_link_3)
+              %a{:class=>"conference_link", :href=>"https://medium.com/eiracube/eiracube-at-blockshow-asia-240557beddbe"}
+                = I18n.t(:conference_events_3_link_4)
+          .conference_events_block
+            .conference_events_pic#the_cryptoeconomy
+            .conference_events_name
+              The CryptoEconomy
+            .conference_events_date_city
+              = I18n.t(:conference_events_4_city)
+              %br
+              = I18n.t(:conference_events_4_date)
+            .conference_events_text              
+              = I18n.t(:conference_events_4_text)
+            .conference_events_links
+              %a{:class=>"conference_link", :href=>"https://www.thecryptoeconomy.com/"}
+                = I18n.t(:conference_events_4_link_1)
+          .conference_events_block
+            .conference_events_pic#second_blockchain_middle_east_forum
+            .conference_events_name
+              2nd Blockchain Middle East Forum
+            .conference_events_date_city
+              = I18n.t(:conference_events_5_city)
+              %br
+              = I18n.t(:conference_events_5_date)
+            .conference_events_text
+              = I18n.t(:conference_events_5_text)
+            .conference_events_links
+              %a{:class=>"conference_link", :href=>"https://www.thecryptoeconomy.com/"}
+                = I18n.t(:conference_events_5_link_1)
+          .conference_events_block
+            .conference_events_pic#token_fest
+            .conference_events_name
+              TokenFest
+            .conference_events_date_city
+              = I18n.t(:conference_events_6_city)
+              %br
+              = I18n.t(:conference_events_6_date)
+            .conference_events_text
+              = I18n.t(:conference_events_6_text)
+            .conference_events_links
+              %a{:class=>"conference_link", :href=>"https://tokenfest.adria.digital/"}
+                = I18n.t(:conference_events_6_link_1)
+              %a{:class=>"conference_link", :href=>"https://www.facebook.com/tokenfestival/"}
+                = I18n.t(:conference_events_6_link_2)
+          .conference_events_block
+            .conference_events_pic#bef
+            .conference_events_name
+              Blockchain Economic Forum BEF
+            .conference_events_date_city
+              = I18n.t(:conference_events_7_city)
+              %br
+              = I18n.t(:conference_events_7_date)
+            .conference_events_text
+              = I18n.t(:conference_events_7_text_1)
+            .conference_events_links
+              %a{:class=>"conference_link", :href=>"http://bef.latoken.com"}
+                = I18n.t(:conference_events_7_link_1)
+              %a{:class=>"conference_link", :href=>"https://www.facebook.com/events/541731396160599/"}
+                = I18n.t(:conference_events_7_link_2)
+
+    / только для мобильной версии, для декстопной ниже
+    - if @mobile_device
+      #advisory_board_container_wrapper.container_wrapper
+        #advisory_board_inner_container.inner_container
+          %h2
+            = I18n.t(:team_members_h2)
+          #advisers_block
+            .two_persons_block
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#matvey_levant
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_1_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_1_title)
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/matveylevant/"} LinkedIn
+                .market_expert_block_text
+                  = I18n.t(:team_member_1_text)
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#kosta_dubinin
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_2_name) 
+                  .market_expert_block_title
+                    = I18n.t(:team_member_2_title)
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"http://www.linkedin.com/in/konstantindubinin/"} LinkedIn
+                .market_expert_block_text
+                  = I18n.t(:team_member_2_text)
+            .two_persons_block
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#andrey_stryukov
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_3_name) 
+                  .market_expert_block_title
+                    = I18n.t(:team_member_3_title)
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/countbox/"} LinkedIn
+                .market_expert_block_text
+                  = I18n.t(:team_member_3_text)
+
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#igor_karavaev
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_4_name) 
+                  .market_expert_block_title
+                    = I18n.t(:team_member_4_title)
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/igor-karavaev-80a0674/"} LinkedIn
+                .market_expert_block_text
+                  = I18n.t(:team_member_4_text)
+
+            .two_persons_block
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#sadia_farjana
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_5_name) 
+                  .market_expert_block_title
+                    = I18n.t(:team_member_5_title)             
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/sadiafarjana/"} LinkedIn
+                .market_expert_block_text
+                  = I18n.t(:team_member_5_text)  
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#jason_hung
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_6_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_6_title)             
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/jason-hung-471714/"} LinkedIn
+                .market_expert_block_text
+                  = I18n.t(:team_member_6_text)  
+
+            .two_persons_block
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#dmitry_machikhin
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_7_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_7_title)          
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/dmitry-machikhin-56282a77/"} LinkedIn
+                .market_expert_block_text
+                  = I18n.t(:team_member_7_text)
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#pavel_sukhorukov
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_8_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_8_title)          
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/pavelsukhorukov/"} LinkedIn
+                .market_expert_block_text
+                  = I18n.t(:team_member_8_text)
+
+            .two_persons_block
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#nikolay_zvezdin
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_9_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_9_title)          
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/nikolayzvezdin/"} LinkedIn
+                .market_expert_block_text
+                  = I18n.t(:team_member_9_text)
+
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#dean_karakitsos
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_10_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_10_title)            
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/sakiskarakitsos/"} LinkedIn
+                .market_expert_block_text
+                  = I18n.t(:team_member_10_text) 
+
+            .two_persons_block
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#amit_dongerdive
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_11_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_11_title)          
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/amitdon/"} LinkedIn
+                .market_expert_block_text
+                  = I18n.t(:team_member_11_text)
+
+
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#hasibul_hossain
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_12_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_12_title)        
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/hasibdesk/"} LinkedIn 
+                .market_expert_block_text
+                  = I18n.t(:team_member_12_text) 
+
+            .two_persons_block
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#douglas_lyons
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_13_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_13_title)          
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/douglas-lyons-72608442/"} LinkedIn
+                .market_expert_block_text
+                  = I18n.t(:team_member_13_text)
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#yauhen_pyl
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_14_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_14_title)       
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/eugenepyl/"} LinkedIn
+                .market_expert_block_text
+                  = I18n.t(:team_member_14_text)   
+
+      / #market_experts_container_wrapper.container_wrapper
+      /   #market_experts_inner_container.inner_container
+      /     %h2 Market Experts
+      /     #experts_block
+    - else
+      / десктопная версия
+      #advisory_board_container_wrapper.container_wrapper
+        #advisory_board_inner_container.inner_container
+          %h2 Team Members and Advisors
+          #advisers_block
+            .two_persons_block
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#matvey_levant
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_1_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_1_title)
+                  .market_expert_block_text
+                    = I18n.t(:team_member_1_text)
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/matveylevant/"} LinkedIn
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#kosta_dubinin
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_2_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_2_title)
+                  .market_expert_block_text
+                    = I18n.t(:team_member_2_text)
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"http://www.linkedin.com/in/konstantindubinin/"} LinkedIn
+            .two_persons_block
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#andrey_stryukov
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_3_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_3_title)
+                  .market_expert_block_text
+                    = I18n.t(:team_member_3_text)
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/countbox/"} LinkedIn
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#igor_karavaev
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_4_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_4_title)
+                  .market_expert_block_text
+                    = I18n.t(:team_member_4_text)
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/igor-karavaev-80a0674/"} LinkedIn
+
+            .two_persons_block
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#sadia_farjana
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_5_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_5_title)
+                  .market_expert_block_text
+                    = I18n.t(:team_member_5_text)               
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/sadiafarjana/"} LinkedIn
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#jason_hung
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_6_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_6_title)
+                  .market_expert_block_text
+                    = I18n.t(:team_member_6_text)               
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/jason-hung-471714/"} LinkedIn
+
+            .two_persons_block
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#dmitry_machikhin
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_7_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_7_title)
+                  .market_expert_block_text
+                    = I18n.t(:team_member_7_text)               
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/dmitry-machikhin-56282a77/"} LinkedIn
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#pavel_sukhorukov
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_8_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_8_title)
+                  .market_expert_block_text
+                    = I18n.t(:team_member_8_text)               
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/pavelsukhorukov/"} LinkedIn
+
+            .two_persons_block
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#nikolay_zvezdin
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_9_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_9_title)
+                  .market_expert_block_text
+                    = I18n.t(:team_member_9_text)               
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/nikolayzvezdin/"} LinkedIn
+
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#dean_karakitsos
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_10_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_10_title)
+                  .market_expert_block_text
+                    = I18n.t(:team_member_10_text)               
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/sakiskarakitsos/"} LinkedIn
+                    
+            .two_persons_block
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#amit_dongerdive
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_11_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_11_title)         
+                  .market_expert_block_text
+                    = I18n.t(:team_member_11_text) 
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/amitdon/"} LinkedIn
+
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#hasibul_hossain
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_12_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_12_title)         
+                  .market_expert_block_text
+                    = I18n.t(:team_member_12_text) 
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/hasibdesk/"} LinkedIn
+                    
+            .two_persons_block
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#douglas_lyons
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_13_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_13_title)  
+                  .market_expert_block_text
+                    = I18n.t(:team_member_13_text)        
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/douglas-lyons-72608442/"} LinkedIn
+              .market_expert_block
+                .market_expert_block_left
+                  .market_expert_block_pic#yauhen_pyl
+                .market_expert_block_right
+                  .market_expert_block_name
+                    = I18n.t(:team_member_14_name)
+                  .market_expert_block_title
+                    = I18n.t(:team_member_14_title)  
+                  .market_expert_block_text
+                    = I18n.t(:team_member_14_text)        
+                  .market_expert_block_link  
+                    %a{:class=>"link_to_linked_in", :href=>"https://www.linkedin.com/in/eugenepyl/"} LinkedIn
+
+
+
+
+      / #market_experts_container_wrapper.container_wrapper
+      /   #market_experts_inner_container.inner_container
+      /     %h2 Market Experts
+      /     #experts_block
+
+
+
+    #andrey_container_wrapper.container_wrapper
+      #andrey_inner_container.inner_container
+        %h2
+          = I18n.t(:andrey_h2_1)
+          %br 
+          = I18n.t(:andrey_h2_2)
+        #andrey_text
+          = I18n.t(:andrey_text)      
+        %video.video-js.vjs-default-skin#andrey_video{:controls => "", :width => "672", :height => "378"}
+          %source{:src => "/andrey_stryukov.mp4#t=0.5", :type => "video/mp4"}
+        / %iframe#andrey_video{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/2coJeIy2LuU?rel=0"}
+
+    #team_experience_container_wrapper.container_wrapper
+      #team_experience_inner_container.inner_container
+        %h2
+          = I18n.t(:team_experience_h2)
+        #team_experience_text
+          = I18n.t(:team_experience_text)
+        #team_experience_blocks
+          .team_experience_block#accenture
+          .team_experience_block#nortel
+          .team_experience_block#huawei
+          .team_experience_block#nokia
+          .team_experience_block#google
+          .team_experience_block#countbox
+          .team_experience_block#pangea
+          .team_experience_block#avant
+
+    #seamless_shopping_container_wrapper.container_wrapper
+      #seamless_shopping_inner_container.inner_container
+        %h2
+          = I18n.t(:seamless_shopping_h2)
+        #seamless_shopping_text
+          = I18n.t(:seamless_text_1)
+          %br
+          %br
+          = I18n.t(:seamless_text_2)
+        #seamless_shopping_pic
+
+    #roadmap_is_clear_container_wrapper.container_wrapper
+      #roadmap_is_clear_inner_container.inner_container
+        %h2
+          = I18n.t(:roadmap_is_clear_h2)
+        #roadmap_map
+        #roadmap_text
+          = I18n.t(:roadmap_is_clear_text)
+        #roadmap_scheme
+          #roadmap_start_point
+          #roadmap_line
+          #roadmap_point_1
+          #roadmap_point_1_text_block
+            .roadmap_point_text_year
+              2017
+            .roadmap_point_text_target
+              = I18n.t(:roadmap_point_1_target)
+          #roadmap_point_2
+          #roadmap_point_2_text_block
+            .roadmap_point_text_quarter
+              = I18n.t(:roadmap_point_2_quarter)
+            .roadmap_point_text_year
+              2017
+            .roadmap_point_text_target
+              = I18n.t(:roadmap_point_2_target)
+          #roadmap_point_3
+          #roadmap_point_3_text_block
+            .roadmap_point_text_quarter
+              = I18n.t(:roadmap_point_3_quarter)
+            .roadmap_point_text_year
+              2018
+            .roadmap_point_text_target
+              = I18n.t(:roadmap_point_3_target)
+          #roadmap_point_4
+          #roadmap_point_4_text_block
+            .roadmap_point_text_quarter
+              = I18n.t(:roadmap_point_4_quarter)
+            .roadmap_point_text_year
+              2018
+            .roadmap_point_text_target
+              = I18n.t(:roadmap_point_4_target)
+          #roadmap_point_5
+          #roadmap_point_5_text_block
+            .roadmap_point_text_quarter
+              = I18n.t(:roadmap_point_5_quarter)
+            .roadmap_point_text_year
+              2018
+            .roadmap_point_text_target
+              = I18n.t(:roadmap_point_5_target)
+          #roadmap_point_6
+          #roadmap_point_6_text_block
+            .roadmap_point_text_quarter
+              = I18n.t(:roadmap_point_6_quarter)
+            .roadmap_point_text_year
+              2019
+            .roadmap_point_text_target
+              = I18n.t(:roadmap_point_6_target)
+          #roadmap_point_7
+          #roadmap_point_7_text_block
+            .roadmap_point_text_quarter
+              = I18n.t(:roadmap_point_7_quarter)
+            .roadmap_point_text_year
+              2020
+            .roadmap_point_text_target
+              = I18n.t(:roadmap_point_7_target)
+          #roadmap_end_point
+    / #our_video_container_wrapper.container_wrapper
+    /   #our_video_container.inner_container
+    /     %h2
+    /       = I18n.t(:our_video_h2)
+    /     %iframe.accompl_video{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/qWWAvAvcvIo"}
+        
+    #accomplishments_to_date_container_wrapper.container_wrapper
+      #accomplishments_to_date_inner_container.inner_container
+        %video.video-js.vjs-default-skin#video_3{:controls => ""}
+          %source{:src => "/video_3.mp4#t=0.5", :type => "video/mp4"}
+        / %h2 Accomplishments to date
+        /   .accompl_videos_block
+        /     .accompl_videos_block_head
+        /       The most efficient replenishment and picking warehouse solution ever
+        /     .accompl_videos_block_pic
+        /       %iframe.accompl_video{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/FT8IwrAVyPI?rel=0"}
+        /   .accompl_videos_block
+        /     .accompl_videos_block_head
+        /       Complete extremely scalable e-fullfilment solution
+        /     .accompl_videos_block_pic
+        /       %iframe.accompl_video{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/QWdjwqh213e8diasjd?rel=0"}
+
+        %h2#team_exp_h2
+          = I18n.t(:team_exp_h2)
+        #team_exp_text
+          = I18n.t(:team_exp_text)
+        #team_exp_blocks
+          .team_exp_block
+            .team_exp_block_head
+              = I18n.t(:team_exp_block_1_head)
+            .team_exp_block_txt
+              = I18n.t(:team_exp_block_1_text)
+          .team_exp_block
+            .team_exp_block_head
+              = I18n.t(:team_exp_block_2_head)
+            .team_exp_block_txt
+              = I18n.t(:team_exp_block_2_text)
+          .team_exp_block
+            .team_exp_block_head
+              = I18n.t(:team_exp_block_3_head)
+            .team_exp_block_txt
+              = I18n.t(:team_exp_block_3_text)
+          .team_exp_block
+            .team_exp_block_head
+              = I18n.t(:team_exp_block_4_head)
+            .team_exp_block_txt
+              = I18n.t(:team_exp_block_4_text)
+        #team_exp_coll
+    #born_in_ireland_container_wrapper.container_wrapper
+      #born_in_ireland_inner_container.inner_container
+        %h2
+          = I18n.t(:born_in_ireland_h2)
+        #blue_block
+          #blue_block_logo
+          = I18n.t(:born_in_ireland_text_1)
+          %br          
+          %br          
+          %a.yellow_link{href: "https://countbox.us", target: "_blank"} https://countbox.us
+          %br          
+          %br          
+          = I18n.t(:born_in_ireland_text_2)
+           
+        #born_in_ireland_blocks
+          .born_in_ireland_block
+            .born_in_ireland_block_pic#enterpriseireland
+            .born_in_ireland_block_link
+              %a{:class=>"link_to_born_in_ireland", :href=>"https://www.enterprise-ireland.com/en/"} https://www.enterprise-ireland.com/en/
+              
+            .born_in_ireland_block_text
+              = I18n.t(:born_in_ireland_block_1_text)
+          .born_in_ireland_block
+            .born_in_ireland_block_pic#gec
+            .born_in_ireland_block_link
+              %a{:class=>"link_to_born_in_ireland", :href=>"http://gec.ie"} http://gec.ie
+              
+            .born_in_ireland_block_text
+              = I18n.t(:born_in_ireland_block_2_text)
+          .born_in_ireland_block
+            .born_in_ireland_block_pic#europeancomission
+            .born_in_ireland_block_link
+              %a{:class=>"link_to_born_in_ireland", :href=>"https://ec.europa.eu/commission/index_en"} https://ec.europa.eu/commission/index_en
+              
+            .born_in_ireland_block_text
+              = I18n.t(:born_in_ireland_block_3_text)
+
+    / #general_robotic_partner_container_wrapper.container_wrapper
+    /   #general_robotic_partner_inner_container.inner_container
+    /     %h2
+
+    #core_technology_partners_container_wrapper.container_wrapper
+      #core_technology_partners_container.inner_container
+        %h2
+          = I18n.t(:core_technology_partners_h2)
+        #core_technology_partners_blocks
+
+          .core_technology_partner_block
+            %a{href: "https://www.iamrobotics.com", target: "_blank"}
+              .core_technology_partner_logo.iamrobotics
+            / .core_technology_partner_name
+            /   IAM Robotics
+            .core_technology_partner_title
+              = I18n.t(:core_technology_partner_3_title)
+              / Robotics partner
+            .core_technology_partner_link
+              %a{href: "https://www.iamrobotics.com", target: "_blank"}
+                https://www.iamrobotics.com
+            %iframe.core_technology_partner_video{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/8bJfOn_d5CU"}
+
+          .core_technology_partner_block
+            %a{href: "https://www.iamrobotics.com", target: "_blank"}
+              .core_technology_partner_logo.addreality
+            / .core_technology_partner_name
+            /   Addreality
+            .core_technology_partner_title
+              = I18n.t(:core_technology_partner_2_title)
+              / Digital signage partner
+            .core_technology_partner_link
+              %a{href: "https://addreality.com", target: "_blank"}
+                https://addreality.com
+            %iframe.core_technology_partner_video{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/d-1JMivEc8U"}
+                
+          .core_technology_partner_block
+            %a{href: "https://www.iamrobotics.com", target: "_blank"}
+              .core_technology_partner_logo.countbox
+            / .core_technology_partner_name
+            /   CountBOX
+            .core_technology_partner_title
+              = I18n.t(:core_technology_partner_1_title)
+            .core_technology_partner_link
+              %a{href: "https://countbox.us", target: "_blank"}
+                https://countbox.us
+            %iframe.core_technology_partner_video{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/NuV5jdAjguY"}
+
+    //    %h3
+    //      Technology used
+    //    #tech_logos
+    //      .tech_logo
+    //      .tech_logo
+    //      .tech_logo
+    //      .tech_logo
+    //      .tech_logo
+    //      .tech_logo
+    //      .tech_logo
+    //      .tech_logo
+
+
+    //#first_email_container_wrapper.container_wrapper
+    //  #first_email_inner_container.inner_container
+    //    #first_email_block
+    //      #first_email_block_text
+    //        Send me updates about EiraCube
+    //      #first_email_block_form
+
+
+    //#amazon_container_wrapper.container_wrapper
+    //  #amazon_inner_container.inner_container
+    //    #amazon_ceo_pic
+    //    #amazon_logo
+    //    #amazon_quote
+    //      "We're definitely going to open additional brick-and-mortar stores"
+    //    #amazon_name
+    //      JEFF BEZOS
+    //    #amazon_ceo
+    //      Chief Executive Officer of Amazon
+    //    #amazon_wsj
+    //      THE WALL STREET JOURNAL 
+
+    #documents_container_wrapper.container_wrapper
+      #documents_inner_container.inner_container
+        %h2          
+          = I18n.t(:documents_h2)
+        #documents_links
+          %a{href: '/EiraCube-one-pager_20_10_2017.pdf', target: '_blank'}
+            .document_block
+              .document_pic#one_pager
+              .document_name
+                = I18n.t(:document_1_name)
+          %a{href: '/EiraCube_WP.pdf', target: '_blank'}
+            .document_block
+              .document_pic#wp_eng
+              .document_name
+                = I18n.t(:document_2_name)
+          %a{href: '/EiraCube_Presentation.pdf', target: '_blank'}
+            .document_block
+              .document_pic#presentation_eng
+              .document_name
+                = I18n.t(:document_3_name)
+          %a{href: '/EiraCube-Terms-of-Service.pdf', target: '_blank'}
+            .document_block
+              .document_pic#terms_of_service
+              .document_name
+                = I18n.t(:document_4_name)
+          %a{href: '/EiraCube-Terms-of-Token-Sale.pdf', target: '_blank'}
+            .document_block
+              .document_pic#terms_of_token_sale
+              .document_name
+                = I18n.t(:document_5_name)
+          %a{href: '/EiraCube-Privacy-Policy.pdf', target: '_blank'}
+            .document_block
+              .document_pic#privacy_policy
+              .document_name
+                = I18n.t(:document_6_name)
+    #buytokens_container_wrapper.container_wrapper
+      #buytokens_inner_container.inner_container
+        #buy_rett_tokens_container
+          %a#buy_rett_tokens{href: 'http://sale.eiracube.io/app/register', target: '_blank'}
+            = I18n.t(:buy_rett_tokens_button_text)
+        #ask_questions_block
+          = I18n.t(:ask_questions_block_text)
+          %a{href: 'https://t.me/eiracubeico', target: '_blank'}
+            #buytokens_telegram_icon
+        %a{href: 'https://www.trackico.io/ico/eiracube/', target: '_blank'}
+          #trackico_logo
+        #email_subscription_block
+          = I18n.t(:email_subscription_block_text)
+          #mc_embed_signup
+            %form#mc_embedded_subscribe_form{:action => "https://eiracube.us17.list-manage.com/subscribe/post?u=8b4135753462441de6956f396&id=5d93e52571", :method => "post", :name => "mc-embedded-subscribe-form", :novalidate => "", :target => "_blank"}
+              #mc_embed_signup_scroll
+                %input#mce_email{:name => "EMAIL", :type => "email", :value => ""}
+                / real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                %div{"aria-hidden" => "true", :style => "position: absolute; left: -5000px;"}
+                  %input{:name => "b_8b4135753462441de6956f396_5d93e52571", :tabindex => "-1", :type => "text", :value => ""}
+                %input#mc_embedded_subscribe{:name => "subscribe", :type => "submit", :value => "Subscribe"}
+    / #email_subscription_container_wrapper.container_wrapper
+    /   #email_subscription_inner_container.inner_container
+        
+    #footer_container_wrapper.container_wrapper
+      #footer_inner_container.inner_container
+        #footer_many_text
+          %p
+            @ 2017 INVENTION BRIDGE SLU
+          %p
+            = I18n.t(:footer_text_1)
+          %p
+            = I18n.t(:footer_text_2)
+          %p
+            = I18n.t(:footer_text_3)
+          %p
+            = I18n.t(:footer_text_4)
+        #footer_small_text
+          %a{:class=>"docs_link", :href=>"/EiraCube-Privacy-Policy.pdf"}             
+            = I18n.t(:footer_link_1)
+          %a{:class=>"docs_link", :href=>"/EiraCube-Terms-of-Service.pdf"}
+            = I18n.t(:footer_link_2)
+          %a{:class=>"docs_link", :href=>"/EiraCube-Terms-of-Token-Sale.pdf"}
+            = I18n.t(:footer_link_3)
+          %p
+            INVENTION BRIDGE SLU
+            %br
+            Carrer de Provença, 281
+            %br
+            08037 Barcelona
+            %br
+            Spain
+
+    %script{ :src => "/jquery-3.2.1.min.js" }
+    %script{ :src => "/jquery.fancybox.js"}
+    %script{ :src => "/slick.min.js"}
+    :javascript
+      document.addEventListener('DOMContentLoaded', function() {
+        httpGetAsync('https://sale.eiracube.io/cabinet/getCrowdsaleData', responseText => {
+          // *****************************************************************************************************
+          // РАСКОММЕНТИРОВАТЬ НИЖНЮЮ СТРОКУ, ЧТОБЫ ПРОВЕРИТЬ ЗАПОЛНИТСЯ ЛИ ГРАДУСНИК КОГДА НАЧНУТ КАПАТЬ ДЕНЬГИ (ДОЛЖЕН ЗАПОЛНИТЬСЯ ПРИМЕРНО НА 30%), ПОТОМ ЗАКОММЕНТИРОВАТЬ ИЛИ УДАЛИТЬ!
+          // responseText = '{"status":"ok","totalUSD":10000000,"tokenPerUSD":0.3764322813962186,"bonus":40,"period":{"start":"2018-02-01 10:00","end":"2018-04-01 10:00","name":"Pre-Sale"},"totalCurrency":0,"totalTokens":1}'
+          var thermometerValueElements = document.getElementsByClassName('thermometerValue');
+          var collectedForNow = JSON.parse(responseText).totalUSD+180000;
+          Array.prototype.forEach.call(thermometerValueElements, element => {
+            var percentOfFullAmount = (collectedForNow/1200000) * 100;
+            percentOfFullAmount = percentOfFullAmount + 1;
+            element.style.width = percentOfFullAmount + '%';
+          });
+          var formattedCollectedForNow = Math.round(collectedForNow).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+
+          document.getElementById('collected_for_now_number').innerHTML = '$ ' + formattedCollectedForNow;
+          var thermometerValueContainerWidth = document.getElementById('thermometerValueContainer').offsetWidth;
+          var softCapMarkMargin = thermometerValueContainerWidth * 0.4167;
+          var hardCapMarkMargin = thermometerValueContainerWidth * 0.8334;
+          document.getElementById("softCapMark").style.marginLeft = softCapMarkMargin + 'px';
+          document.getElementById("hardCapMark").style.marginLeft = hardCapMarkMargin + 'px';
+          var thermometerSoftCapValueMargin = thermometerValueContainerWidth * 0.4167 - document.getElementById("thermometerSoftCapValue").offsetWidth/2;    
+          var thermometerHardCapValueMargin = thermometerValueContainerWidth * 0.8334 - document.getElementById("thermometerHardCapValue").offsetWidth/2;     
+          document.getElementById("thermometerSoftCapValue").style.marginLeft = thermometerSoftCapValue + 'px';
+          var thermometerSoftCapTitle = thermometerValueContainerWidth * 0.4167 - document.getElementById("thermometerSoftCapTitle").offsetWidth/2;
+          var thermometerHardCapTitle = thermometerValueContainerWidth * 0.8334 - document.getElementById("thermometerHardCapTitle").offsetWidth/2;
+          document.getElementById("thermometerSoftCapTitle").style.marginLeft = thermometerSoftCapTitle + 'px';
+          document.getElementById("thermometerHardCapTitle").style.marginLeft = thermometerHardCapTitle + 'px';
+        });
+
+        showCountdownTimer();
+
+        $(".fancybox").fancybox({
+          padding: 3,
+          fitToView : false,
+          width   : '560px',
+          height    : '315px',
+          autoSize  : true,
+          closeClick  : false,
+          openEffect  : 'none',
+          closeEffect : 'none',
+          showCloseButton: 'true',
+          helpers : {
+            overlay : {
+              css : {
+                'background' : 'rgba(0, 11, 19, 0.9)'
+              }
+            }
+          }
+        });
+
+        $('#solution_slider').slick({
+          arrows: false,
+          autoplay: true,
+          fade: true,
+          speed: 1600,
+          autoplaySpeed: 2000,
+          pauseOnHover: false
+        });
+
+        
+        window.hola_player({player: '#youtube_video_big_block'});        
+        window.hola_player({player: '#how_it_works_video_popup'});
+        window.hola_player({player: '#andrey_video'});
+        window.hola_player({player: '#video_3'});
+      });
+
+      function showCountdownTimer() {
+        // Set the date we're counting down to
+        var countDownDate = new Date("Apr 1, 2018 10:00:00 GMT").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+          // Get todays date and time
+          var now = new Date().getTime();
+
+          // Find the distance between now an the count down date
+          var distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Display the result in the element with id="demo"
+          document.getElementById("timer_days").innerHTML = ('0' + days).slice(-2);
+          document.getElementById("timer_hours").innerHTML = ('0' + hours).slice(-2);
+          document.getElementById("timer_min").innerHTML = ('0' + minutes).slice(-2);
+          document.getElementById("timer_sec").innerHTML = ('0' + seconds).slice(-2);
+
+          // If the count down is finished, write some text 
+          if (distance < 0) {
+            clearInterval(x);
+          document.getElementById("timer_days").innerHTML = '00';
+          document.getElementById("timer_hours").innerHTML = '00';
+          document.getElementById("timer_min").innerHTML = '00';
+          document.getElementById("timer_sec").innerHTML = '00';
+          }
+        }, 1000);      
+      }
+
+      function httpGetAsync(theUrl, callback) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() { 
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                callback(xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", theUrl, true);
+        xmlHttp.send(null);
+      }
+
+      function toggleHowItWorksPopup() {
+        if (!$('#how_it_works_overlay').is(':visible')) {
+          $('#how_it_works_overlay').show();
+          $('#how_it_works_popup').show();
+        } else {
+          $('#how_it_works_video_popup_html5_api').get(0).pause();
+          $('#how_it_works_overlay').fadeOut();
+          $('#how_it_works_popup').fadeOut();
+        }
+      }
+
+    - if @mobile_device    
+      :javascript
+        $(window).bind('scroll', function () {
+            if ($(window).scrollTop() > 180) {
+                $('#header_container_wrapper').addClass('menu_fixed');
+            } else {
+                $('#header_container_wrapper').removeClass('menu_fixed');
+            }
+        });
+    - else
+      :javascript
+        $(window).bind('scroll', function () {
+            if ($(window).scrollTop() > 90) {
+                $('#header_container_wrapper').addClass('menu_fixed');
+            } else {
+                $('#header_container_wrapper').removeClass('menu_fixed');
+            }
+        });
+
+
+
+

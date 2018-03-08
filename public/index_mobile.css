@@ -1,0 +1,1798 @@
+@media all and (max-width: 1900px) {
+
+
+/**/
+.inner_container{
+margin: 0 auto;
+width: 480px;
+}
+h2 {
+  padding: 40px;
+}
+#ico_menu{
+display: none;
+}
+#ico_menu ul li:hover{
+cursor: pointer;
+}
+#youtube_video_big_block{
+margin:10px 0px 10px 0px;
+}
+#main_block_container_wrapper{
+height: 1000px;
+background:#011F35;
+box-shadow: 1px 0px 5px #011F35;
+}
+
+#main_picture_cube_robot{
+display: none;
+}
+#main_picture{
+display: none;
+}
+
+#main_picture_block{
+float: left;
+width:480px;
+height: 400px;
+margin: 0px 0px 40px 0px;
+background:  url(../shelf_mobile_960px.png) 0px 0px no-repeat;
+background-size: cover;
+}
+
+#collected_for_now{
+float:right;
+width: 340px;
+margin: 40px 70px 0px 70px;
+text-align: center;
+}
+#thermometer{
+float:left;
+width: 340px;
+margin: 20px 70px 0px 70px;
+
+}
+#timer_name{
+float: left;
+margin: 0px 80px 6px 80px;
+height: 36px;
+width: 320px;
+font-size: 20px;
+color: white;
+text-align: center;
+}
+#timer_block{
+  float: left;
+margin: 20px 123px 20px 123px;
+}
+#social_icons{
+width: 480px;
+margin-left:40px; 
+}
+#benefits_and_social{
+  width: 480px;
+}
+#solution_pic{
+width: 480px;
+height: 300px;
+}
+#solution_text{
+width: 480px;
+}
+
+#timer_money_thermometer_block{
+float: left;
+padding: 30px 0px 0px 0px;
+border:1px solid white;
+margin: 60px 0px 0px 0px;
+width: 478px;
+border-radius: 20px;
+height: 288px;
+}
+#buy_tokens_sale{
+bottom: 73px;
+right: -270px;
+}
+
+#money_block_container_wrapper{
+height: 720px;
+}
+#buy_tokens_big_button{
+float: left;
+width: 300px;
+
+margin: 0px 90px 0px 90px;
+}
+#buy_token_button_in_menu{
+margin: 20px 0px 0px 250px;
+}
+.our_strength_block{
+float: left;
+width: 500px;
+height: 214px;
+margin: 40px 0px 0px 0px;
+}
+.our_strength_block_pics{
+margin: 16px 0px 0px 40px;
+}
+.our_strength_block_head_and_text{
+  float: left;
+width: 200px;
+height: 200px;
+margin: 0px 0px 0px 40px;
+}
+#our_strength_container_wrapper{
+height: 1100px;
+}
+#solution_container_wrapper{
+height: 750px;
+}
+#solution_inner_container h2{
+padding: 20px 10px 0px 40px;
+}
+#solution_text{
+height:200px;
+padding: 0px 0px 0px 0px;
+}
+#youtube_video_big_block{
+width: 480px;
+height: 270px;
+}
+#challenge_container_wrapper{
+height: 1680px;
+}
+#challenge_inner_container {
+  width: 960px;
+}
+.two_persons_block{
+width: 480px;
+
+min-height: 300px;
+}
+#hundreds_of_brands_container_wrapper{
+height: 1620px;
+}
+#hundreds_of_brands_inner_container {
+  width: 960px;
+}
+#conference_events_container_wrapper{
+height: 7620px;
+}
+#conference_events_inner_container {
+  width: 960px;
+}
+#meet_our_core_team_container_wrapper{
+height: 2100px;
+}
+#footer_container_wrapper{
+height: 560px;
+}
+#benefits_container_wrapper {
+  height: 912px !important;
+  padding: 0;
+}
+#benefits_inner_container {
+  width: 960px;
+}
+.benefits_block{
+  position: absolute;
+  color: white;
+  font-size: 32px;
+  z-index: 2;
+}
+#benefits_inner_container h2 {
+  text-align: center;
+  color: white;
+  padding: 50px 0 0 0;
+  font-size: 64px;
+  margin: 0;
+}
+#benefits_owners{
+  top: 120px;
+  left: 40px;
+  width: 320px;
+}
+#benefits_consumers{
+  top: 120px;
+  width: 290px;
+  left: 660px;
+}
+#benefits_merchants{
+  left: 80px;
+  top: 540px;
+  width: 840px;
+}
+#benefits_merchants h3 {
+  text-align: center;
+}
+.benefits_block ul {
+  padding: 0 0 0 20px;
+}
+#solution_slider{
+  margin: 0 auto;
+  width: 960px;
+  height: 671px !important;  
+  float: none;
+}
+.solution_slide{
+  float: left;
+  width: 960px;
+  height: 671px;
+  background:  url(../s1.jpg) 0px 0px no-repeat;
+  background-size: contain;  
+}
+.solution_slide_container{
+  float: left;
+width: 100%;
+height: 440px;  
+}
+#footer_many_text {
+  width: 100%;
+  margin: 40px 0 0 0;
+}
+#benefits_eiracube_logo{
+  top: 99px;
+}
+.real_estate_partners_block {
+  width: 880px;
+  padding: 80px 40px;
+  font-size: 20px;
+}
+.real_estate_partners_block_pic {
+  float: right;
+  width: 300px;
+  height: 300px;
+  margin: 0 40px;
+}
+.real_estate_partners_block_name {
+  width: 580px;
+  padding: 0 0 20px 0;
+  font-size: 64px;
+  font-weight: bold;
+}
+.real_estate_partners_block_text {
+  width: 580px;
+  padding: 0 20px 0 0;
+  font-size: 48px;
+}
+#real_estate_text {
+  font-size: 48px;
+  padding: 40px;
+  width: 880px;
+}
+#real_estate_partners_container_wrapper{
+height:6380px;
+}
+#real_estate_partners_inner_container {
+  width: 960px;
+}
+.real_estate_partners_blocks_line {
+  padding: 0;
+  width: 100%;
+}
+#andrey_video{
+  width: 480px;
+  height: 270px;
+  margin: 0 40px;
+}
+#roadmap_map{
+  width: 480px;
+  height: 300px;
+  margin: 0 auto;
+  background: url('../map.png') no-repeat;
+  background-size: contain;
+}
+#roadmap_text{
+  width: 480px;
+  padding: 20px 0 0 0px;
+}
+#roadmap_scheme{
+  position: relative;
+  width: 100%;
+  float: left;
+  margin-top: 80px;
+  height: 1400px;
+}
+#roadmap_line{
+  position: absolute;
+  width: 239px;
+  height: 612px;
+  border-right: 2px dashed #2b98eb;
+  top: 10px;
+}
+#roadmap_start_point{
+  z-index: 2;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 230px;
+  background: white;
+  border-radius: 20px;
+}
+#roadmap_point_1, #roadmap_point_2, #roadmap_point_3, #roadmap_point_4, #roadmap_point_5, #roadmap_point_6, #roadmap_point_7{
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 234px;
+  background: #104367;
+  border-radius: 12px;
+  z-index: 2;
+}
+#roadmap_point_1{
+  top: 160px;
+  background: #2b98eb;
+}
+#roadmap_point_2{
+  top: 320px;
+  background: #2b98eb;
+}
+#roadmap_point_3{
+  top: 480px;
+}
+#roadmap_point_4{
+  top: 640px;
+}
+#roadmap_point_5{
+  top: 800px;
+}
+#roadmap_point_6{
+  top: 960px;
+}
+#roadmap_point_7{
+  top: 1120px;
+}
+.roadmap_point_text_year{
+  font-size: 56px;
+}
+#roadmap_point_1_text_block, #roadmap_point_2_text_block, #roadmap_point_3_text_block, #roadmap_point_4_text_block, #roadmap_point_5_text_block, #roadmap_point_6_text_block, #roadmap_point_7_text_block {
+  position: absolute;
+  width: 140px;
+  color: white;
+}
+#roadmap_point_1_text_block{
+  right: 270px;
+  top: 23px;
+}
+#roadmap_point_2_text_block{
+  left: 285px;
+  top: 100px;
+}
+#roadmap_point_3_text_block{
+  right: 270px;
+  top: 180px;
+}
+#roadmap_point_4_text_block{
+  left: 285px;
+  top: 260px;
+}
+#roadmap_point_5_text_block{
+  right: 270px;
+  top: 340px;
+}
+#roadmap_point_6_text_block{
+  left: 285px;
+  top: 420px;
+}
+#roadmap_point_7_text_block{
+  right: 270px;
+  top: 500px;
+}
+#roadmap_end_point{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 1340px;
+  left: 220px;
+  background: white url(../tick.svg) no-repeat;
+  background-size: 25px 25px;
+  background-position: center center;
+  border-radius: 40px;
+  z-index: 2;
+}
+
+.active_block{
+width:460px;
+height: 420px;
+}
+.active_block .percent_block{
+width:420px;
+}
+
+.active_block .date_block{
+width:420px;
+}
+.date_block .date_text{
+padding: 10px 0px 10px 0px;
+}
+.bonus_sale_block{
+width: 382px;
+height: 44px;
+font-size: 34px;
+}
+.active_block .percent_numbers{
+font-size: 38px;
+    padding: 24px 0px 14px 0px;
+height:40px;
+}
+.active_block .percent_text{
+padding: 0px 0px 30px 0px;
+font-size: 22px;
+}
+.active_block .date_button_buy{
+height: 46px;
+font-size: 24px;
+padding:18px 6px 4px 6px; 
+}
+.inactive_block{
+width: 300px;
+height: 190px;
+margin: 20px 75px 6px 75px;
+}
+.inactive_block .percent_block{
+width: 310px;
+}
+.inactive_block .date_block{
+width: 310px;
+}
+#rett_token_sale_container_wrapper{
+height:3840px;
+background: #012740; 
+}
+#rett_token_sale_inner_container{
+height:3700px;
+}
+#rett_params{
+width: 480px;
+height: 380px;
+padding: 12px 0px 12px 0px;
+}
+.rett_param{
+text-align: center;
+height: 80px;
+padding: 20px 0px 20px 0px;
+}
+#rett_param_token{
+width: 240px;
+}
+#rett_param_soft_cap{
+width: 240px;
+}
+#rett_param_hard_cap{
+width: 240px;
+}
+#rett_param_token_exchange{
+width: 240px;
+}
+#rett_param_protocol{
+width: 240px;
+}
+#rett_param_decimals{
+width: 240px;
+}
+.rett_param_value{
+font-size: 24px;
+}
+#rett_diagramm{
+  height: 400px;
+  width: 400px;
+margin: 40px 40px 40px 40px;
+padding: 0px 0px 0px 0px;
+}
+#rett_diag_legend{
+margin: 60px 0px 0px 100px;
+height: 240px;
+}
+.rett_info_block{
+width: 480px;
+}
+
+.rett_info_block{
+margin: 10px 0px 20px 0px;
+}
+#rett_more_info_in_wp{
+font-size: 18px;
+margin: 40px 0px 10px 0px;
+}
+
+#andrey_inner_container{
+height:690px;
+}
+#andrey_video{
+width: 480px;
+height: 270px;
+}
+/**/
+
+
+#header_inner_container{
+margin: 0 auto;
+width: 960px;
+}
+#ico_logo{
+height:162px;
+width:222px;
+}
+#header_container_wrapper, #header_container_wrapper_2{
+height: 180px !important;
+}
+#buy_token_button_in_menu{
+width: 440px;
+margin: 34px 0px 0px 260px;
+height: 72px;
+font-size:60px;
+}
+.menu_fixed #ico_logo{
+height:162px;
+width:222px;
+}
+#main_text_block{
+height:900px;
+width:900px;
+}
+#main_picture_block{
+float: left;
+width: 960px;
+height: 800px;
+}
+#main_block_inner_container{
+margin: 0 auto;
+width: 960px;
+}
+#main_text_block h2{
+float: left;
+width: 880px;
+height: 400px;
+margin: 0;
+font-size: 100px;
+font-weight:normal;
+}
+#main_text_block p{
+float: left;
+width: 900px;
+height: 400px;
+margin: 0px 30px 0px 30px;
+font-size: 54px;
+font-weight:normal;
+}
+#block_with_ratings{
+width: 900px;
+
+height: 160px;
+
+margin: 320px 30px 0px 30px;
+}
+.rating_mini_block{
+float: left;
+width: 120px;
+height: 120px;
+background: #3BBA69;
+margin: 0px 48px 0px 0px;
+border-radius: 16px;
+}
+#icobench_rating_mini_pic {
+
+    margin: 20px 16px 0px 16px;
+    width: 88px;
+    height: 44px;
+
+}
+
+#trackico_rating_mini_pic {
+    margin: 18px 8px 0px 18px;
+    width: 88px;
+    height: 44px;
+
+}
+#mini_video_block {
+
+    float: left;
+    width: 520px;
+    height: 120px;
+    margin: 0px 0px 0px 20px;
+
+}
+#mini_video {
+    border-radius: 16px;
+    float: left;
+    width: 198px;
+    height: 112px;
+    border: 4px solid #3bb3f2;
+    margin: 0px 0px 0px 0px;
+
+}
+#mini_video_text_blck {
+  float: left;
+    width: 276px;
+    height: 80px;
+    margin: 30px 0px 0px 20px;
+    font-size: 34px;
+    line-height: 32px;
+}
+#mini_video_text_blck b{
+
+    font-size: 20px;
+
+}
+
+
+.mini_star{
+margin: 4px 4px 4px 12px;
+width: 36px;
+height: 36px;
+}
+.mini_rating{
+float: left;
+width: 36px;
+height: 36px;
+font-size: 36px;
+font-weight: bold;
+color: white;
+margin: 4px 4px 4px 0px;
+}
+#change_language_container{
+float: left;
+
+width: 800px;
+
+height: 80px;
+margin: 120px 0px 20px 40px;
+}
+
+.active_lang {
+
+    float: left;
+    border: 2px solid #3BB3F2;
+    border-radius: 8px;
+    padding: 6px 12px 6px 12px;
+    font-size: 26px;
+
+}
+#change_language_container a {
+
+    float: left;
+    border: 0px solid #3BB3F2;
+    font-size: 26px;
+    padding: 8px 14px 8px 14px;
+    color: #3BB3F2;
+    text-decoration: none;
+}
+#money_block_container_wrapper{
+height: 2600px;
+}
+#money_block_inner_container{
+width: 960px;
+height: 1500px;
+}
+#social_icons {
+    width: 900px;
+    height: 120px;
+    margin-top: 66px;
+    margin-left:40px;
+}
+#telegramm_block {
+
+    float: left;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+
+}
+
+#telegramm_icon {
+
+    float: left;
+    width: 100px;
+    height: 96px;
+    margin: 28px 32px 50px 0px;
+
+}
+#telegramm_text {
+
+    float: left;
+    width: 128px;
+    height: 96px;
+    color: white;
+    font-size: 26px;
+    margin: 24px 0px 0px 0px;
+
+}
+
+#whitepaper_block {
+
+    color: white;
+    float: left;
+    width: 210px;
+    height: 120px;
+    margin: 32px 8px 0px 0px;
+
+}
+#whitepaper_icon {
+
+    float: left;
+    width: 66px;
+    height: 90px;
+    background: url(../whitepaper_icon2.svg) no-repeat;
+        background-size: auto auto;
+    background-size: cover;
+    margin: 10px 36px 20px 0px;
+
+}
+#whitepaper_text {
+
+    color: white;
+    float: left;
+    width: 100px;
+    height: 80px;
+    margin: 20px 0px 0px 0px;
+    font-size: 26px;
+
+}
+
+#benefits_and_social {
+
+    width: 900px;
+    float: left;
+
+    height: 580px;
+    margin: 0px 0px 0px 0px;
+
+}
+#twitter_icon {
+
+    float: left;
+    width: 56px;
+    height: 56px;
+    background: url(../twitter2.svg) no-repeat;
+        background-size: auto auto;
+    background-size: cover;
+    margin: 60px 32px 20px 40px;
+
+}
+#facebook_icon {
+
+    float: left;
+    width: 32px;
+    height: 56px;
+    background: url(../facebook2.svg) no-repeat;
+        background-size: auto auto;
+    background-size: cover;
+    margin: 52px 32px 20px 0px;
+
+}
+#medium_icon {
+
+    float: left;
+    width: 70px;
+    height: 62px;
+    background: url(../medium_icon.svg) no-repeat;
+        background-size: auto auto;
+    background-size: cover;
+    margin: 48px 12px 20px 8px;
+
+}
+#bitcointalk_icon{
+  float: left;
+ width: 62px;
+height: 62px; 
+background:  url(../bitcointalk.svg) no-repeat;
+background-size: cover;
+margin:51px 0px 10px 20px;  
+}
+#collected_for_now {
+
+    float: right;
+    width: 640px;
+    margin: 80px 140px 0px 140px;
+    text-align: center;
+
+}
+#collected_for_now {
+
+    float: right;
+    width: 640px;
+    height: 100px;
+    margin: 80px 140px 0px 140px;
+    text-align: center;
+
+}
+#collected_for_now_text {
+
+    float: left;
+    width: 160px;
+    height: 80px;
+    line-height: 76px;
+    color: white;
+    font-size: 36px;
+    margin-top:20px;
+    margin-left:58px;
+
+}
+#collected_for_now_number {
+
+    float: left;
+    width: 400px;
+    height: 80px;
+    color: white;
+    font-size: 80px;
+    margin-left:20px;
+
+}
+.thermometerContainer {
+
+    float: left;
+    width: 760px;
+    height: 320px;
+    margin-left:40px;
+
+}
+.thermometerValue {
+
+    height: 72px;
+    background: #3bba69;
+    width: 0%;
+    border-radius: 14px;
+    box-shadow:  0px 0px 24px #3bba69;
+    background: linear-gradient(to right, #a0d6ff,#3fff82);
+
+}
+#softCapMark, #hardCapMark, #targetMark {
+
+    position: absolute;
+    width: 2px;
+    height: 88px;
+    margin-top: 0px;
+    background: white;
+
+}
+#softCapMark, #hardCapMark, #targetMark {
+
+    position: absolute;
+    width: 4px;
+    height: 88px;
+    margin-top: 0px;
+    background: white;
+
+}
+
+#thermometerTargetValue, #thermometerSoftCapValue, #thermometerHardCapValue, #thermometerSoftCapTitle, #thermometerHardCapTitle {
+
+    position: absolute;
+    color: white;
+    font-size: 24pt;
+    text-align: center;
+
+}
+#thermometerValueContainer {
+
+    border-radius: 28px;
+
+}
+#thermometerTargetValue, #thermometerSoftCapValue, #thermometerHardCapValue, #thermometerSoftCapTitle, #thermometerHardCapTitle {
+margin-top: 20px;
+}
+#timer_money_thermometer_block {
+
+    float: left;
+    padding: 50px 20px 0px 20px;
+    border: 4px solid white;
+    margin: 200px 0px 0px 0px;
+    width: 912px;
+    border-radius: 80px;
+    height: 650px;
+
+}
+#timer_name {
+
+    float: left;
+    margin: 20px 50px 12px 60px;
+    height: 86px;
+    width: 812px;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+
+}
+.number_text_clock_block {
+
+    float: left;
+    width: 92px;
+    height: 120px;
+
+}
+.number_text_clock_block {
+
+    float: left;
+    width: 150px;
+    height: 120px;
+
+}
+.text_clock {
+
+    float: left;
+    font-size: 54px;
+    color: white;
+    padding: 8px 16px 0px 16px;
+    text-align: center;
+    width: 120px;
+
+}
+.number_clock {
+
+    float: left;
+    font-size: 100px;
+    color: white;
+    font-weight: bold;
+    padding: 0px 16px 0px 16px;
+
+}
+.dv_block {
+
+    float: left;
+    font-size: 80px;
+    color: white;
+    font-weight: bold;
+    padding: 0px 8px 0px 8px;
+    height: 120px;
+
+}
+#timer_block {
+
+    float: left;
+    margin: 40px 123px 40px 123px;
+    margin: 0px 0px 60px 0px;
+    height: 160px;
+    width: 800px;
+    padding: 20px 0px 20px 123px;
+
+}
+#buy_tokens_big_button {
+
+    float: left;
+
+    margin: 60px 100px 0px 100px;
+
+    
+    background: #EB7D3C;
+    width: 720px;
+    height: 98px;
+    padding: 40px 1px 24px 1px;
+    color: white;
+    border-radius: 32px;
+    font-size: 70px;
+
+
+}
+
+#buy_tokens_sale {
+
+bottom: 167px;
+
+right: -637px;
+
+border-radius: 52px;
+
+width: 97px;
+
+height: 66px;
+
+padding: 22px 20px 0px 20px;
+
+font-size: 39px;
+}
+
+
+
+#our_strength_inner_container{
+width: 960px;
+}
+.our_strength_block {
+
+    float: left;
+    width: 960px;
+    height: 450px;
+ 
+}
+.our_strength_block_head_and_text{
+
+    float: left;
+    width: 480px;
+    height: 600px;
+}
+.our_strength_block_head {
+
+    float: left;
+    width: 400px;
+    height: 160px;
+    font-size: 78px;
+    margin: 20px 0px 60px 0px;
+    font-weight: normal;
+    color: #011F35;
+
+}
+
+.our_strength_block_text {
+font-size: 40px;
+    float: left;
+    width: 440px;
+    height: 120px;
+    margin: 0px 0px 10px 0px;
+
+}
+.our_strength_block_pics {
+    margin: 48px 0px 0px 40px;
+    float: left;
+    width: 360px;
+    height: 360px;
+}
+#our_strength_container_wrapper{
+height:2040px;
+}
+#solution_inner_container h2{
+padding: 40px 20px 0px 30px;
+font-size: 64px;
+}
+#solution_container_wrapper{
+height: 1740px;
+padding-bottom: 60px;
+}
+#solution_inner_container{
+width: 960px;
+}
+
+#solution_text{
+font-size: 48px;
+width: 900px;
+padding: 10px 30px 40px 30px;
+float: left;
+height: auto;
+}
+#how_it_works_container_wrapper{
+height: 880px;
+}
+#how_it_works_inner_container{
+width: 960px;
+}
+#how_it_works_container_wrapper h2{
+width: 960px;
+font-size: 64px;
+}
+#youtube_video_big_block{
+width: 960px;
+
+height: 540px;
+}
+.two_persons_block{
+width: 960px;
+}
+#advisory_board_inner_container h2,#market_experts_inner_container h2, #meet_our_core_team_container_wrapper h2{
+width: 880px;
+font-size: 64px;
+margin:80px 0px 100px;
+padding: 40px 40px 10px;
+}
+#market_experts_inner_container h2 {
+  margin: 20px 0 100px;
+}
+#advisory_board_inner_container,#market_experts_inner_container{
+width: 960px;
+}
+.market_expert_block, .team_member_block{
+  float: left;
+width: 880px;
+margin:0px 40px 140px;
+height: auto;
+}
+.market_expert_block_pic, .team_member_block_pic {
+
+    float: left;
+    width: 220px;
+    height: 220px;
+}
+.market_expert_block_left, .team_member_block_left {
+
+    float: left;
+    width: 220px;
+    min-height: 220px;
+    margin: 0px 60px 0px 0px;
+
+}
+.market_expert_block_right, .team_member_block_right {
+
+    float: left;
+    width: 600px;
+    min-height: 220px;
+    margin: 0px 0px 0px 0px;
+
+}
+.market_expert_block_name, .team_member_block_name {
+
+    float: left;
+    width: 600px;
+    font-weight: normal;
+    font-size: 58px;
+    margin: 0;
+
+}
+.market_expert_block_title, .team_member_block_title {
+
+    float: left;
+    width: 600px;
+    margin: 12px 0px 12px 0px;
+    color: #3bba69;
+    font-size: 54px;
+
+}
+.market_expert_block_text, .team_member_block_text {
+
+    float: left;
+    width: 880px;
+    font-size: 48px;
+    margin: 40px 0 0 0;
+
+}
+.market_expert_block_link, .team_member_block_link {
+  font-size: 48px;
+    float: left;
+    width: 600px;
+}
+#advisory_board_container_wrapper{
+/*height:11100px ;*/
+height: 7480px;
+/*background: red;*/
+}
+#market_experts_container_wrapper{
+height:2860px ;
+}
+#meet_our_core_team_container_wrapper{
+height:5700px ;
+
+}
+#meet_our_core_team_inner_container{
+width: 960px;
+}
+.team_member_block_education {
+  float: left;
+height: 40px;
+font-size:32px;
+padding: 20px 0px 8px 0px;
+}
+#andrey_container_wrapper{
+height: 1060px;
+}
+#andrey_inner_container{
+width: 960px;
+}
+#andrey_video{
+width: 880px;
+padding: 0 40px;
+height: 540px;
+}
+#roadmap_is_clear_inner_container{
+width: 960px;
+}
+#roadmap_is_clear_container_wrapper{
+height: 2900px;
+}
+#roadmap_map {
+
+    width: 960px;
+    height: 600px;
+}
+#roadmap_text {
+
+    width: 900px;
+    padding: 120px 30px 0px 30px;
+font-size: 40px;
+text-align: justify;
+}
+
+#born_in_ireland_inner_container {
+  width: 960px;
+}
+#blue_block {
+  width: 100%;
+  padding: 30px 30px 60px 20px;
+  box-sizing: border-box;
+  font-size: 48px;
+  height: auto;
+}
+#blue_block_logo {
+  margin: 0 auto;
+  width: 240px;
+  height: 224px;
+}
+#born_in_ireland_blocks {
+  float: left;
+  height: auto;
+}
+.born_in_ireland_block {
+  width: 960px;
+  margin: 0;
+  padding: 0 40px;
+  box-sizing: border-box;
+  height: auto;
+  margin-top: 120px;
+}
+.born_in_ireland_block_pic, .born_in_ireland_block_link, .born_in_ireland_block_text {
+  width: 100%;
+  font-size: 48px;
+  box-sizing: border-box;
+}
+.born_in_ireland_block_link a {
+  font-size: 44px;
+  width: 100%;
+}
+.born_in_ireland_block_pic {
+  float: right;
+  box-sizing: border-box;
+  width: 100%;
+  height: 184px;
+}
+.born_in_ireland_block_link, .born_in_ireland_block_text {
+  float: left;
+  width: 100%;
+  height: auto;
+  margin: 40px 0 0;
+}
+#born_in_ireland_container_wrapper {
+  height: 5080px;
+}
+#enterpriseireland{
+  background: url(../enterpriseireland.png) no-repeat;
+  background-size: contain;
+  background-position: -12px top;
+}
+#gec{
+  background: url(../gec.png) no-repeat;
+  background-size: contain;
+  background-position: center top;
+}
+#europeancomission{
+  background: url(../europeancomission.png) no-repeat;
+  background-size: contain;
+  background-position: left top;
+  width: 100%;
+  margin: 0;
+  height: 461px;
+}
+#documents_inner_container {
+  width: 960px;
+}
+.accompl_videos_block {
+  width: 100%;
+  margin-bottom: 60px;
+  font-size: 34px;
+}
+/*.accompl_video {
+  width: 920px;
+  height: 517.5px;
+  margin-top: 40px;
+}*/
+#accomplishments_to_date_container_wrapper {
+  height: 2400px;
+}
+#team_experience_container_wrapper {
+  height: 1160px;
+  padding-bottom: 100px;
+}
+#team_experience_inner_container {
+  width: 960px;
+}
+#seamless_shopping_container_wrapper {
+  height: 1480px;
+}
+#seamless_shopping_inner_container {
+  width: 960px;
+}
+#the_press_container_wrapper {
+  height: 1600px;
+}
+#the_press_inner_container {
+  width: 960px;
+}
+#challenge_text {
+  font-size: 48px;
+}
+#challenge_inner_container h2, #hundreds_of_brands_inner_container h2, #real_estate_partners_inner_container h2, #the_press_inner_container h2, #rett_token_sale_inner_container h2, #conference_events_inner_container h2, #andrey_inner_container h2, #team_experience_inner_container h2, #seamless_shopping_inner_container h2, #roadmap_is_clear_inner_container h2, #accomplishments_to_date_inner_container h2, #born_in_ireland_inner_container h2, #core_technology_partners_container h2, #documents_inner_container h2 {
+  font-size: 64px;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+#challenge_inner_container h2 {
+  margin: 40px 0;
+}
+#roadmap_is_clear_inner_container h2, #accomplishments_to_date_inner_container h2, #born_in_ireland_inner_container h2, #core_technology_partners_container h2, #documents_inner_container h2 {
+  margin-top: 60px;
+  padding: 0 40px;
+}
+.challenge_block {
+  width: 780px;
+  height: auto;
+  padding: 50px;
+  margin: 0 40px 60px;
+}
+.challenge_block_header {
+  font-size: 60px;
+  width: 100%;
+  height: auto;
+  padding: 0 0 50px 0;
+}
+.challenge_block_text {
+  font-size: 48px;
+  width: 100%;
+}
+
+#hundreds_of_brands_text {
+  font-size: 48px;
+  padding: 0 40px 60px;
+}
+
+#team_exp_text {
+  font-size: 48px;
+}
+
+#buytokens_container_wrapper {
+  /*height: 720px;*/
+  padding: 0 0 40px;
+}
+#buytokens_inner_container {
+  width: 960px;
+}
+#ask_questions_block, #buy_rett_tokens {
+  font-size: 44px;
+}
+#buy_rett_tokens {
+  padding: 1em 1.3em;
+}
+#ask_questions_block {
+  margin-top: 100px;
+}
+#buytokens_telegram_icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: -30px;
+}
+#trackico_logo {
+  margin-top: 60px;
+  width: 384px;
+  height: 128px;
+}
+
+#footer_inner_container {
+  width: 960px;
+}
+#footer_many_text {
+  float: left;
+  font-size: 18px;
+  width: 600px;
+  height: auto;
+  padding: 0 40px 0 0;
+}
+#footer_small_text {
+  font-size: 20px;
+  float: left;
+  width: 320px;
+  height: auto;
+}
+.brand_interest_logo {
+  margin: 20px 10px;
+  width: 300px;
+  height: 300px;
+}
+#rett_token_sale_inner_container h2 {
+  padding: 0;
+}
+.the_press_block {
+  width: 400px;
+  height: 139px;
+  margin: 30px 40px;
+}
+
+.conference_events_block {
+  width: 880px;
+  padding: 0 40px;
+  margin: 120px 0 0;
+  float: left;
+  height: auto;
+}
+.conference_events_pic {
+  float: right;
+  width: 360px;
+  height: 230px;
+  margin: 0 0 20px 80px;
+}
+.conference_events_name {
+  font-size: 58px;
+  width: 480px;
+  margin: 0 0 10px 0;
+}
+.conference_events_date_city {
+  font-size: 44px;
+  margin: 0 0 40px;
+  width: 480px;
+}
+.conference_events_text {
+  margin: 20px 0 0;
+  width: 880px;
+  font-size: 48px;
+}
+.conference_events_links {
+  width: 100%;
+  float: left;
+  margin: 40px 0 0;
+}
+a.conference_link {
+  margin: 0;
+  font-size: 44px;
+  width: 100%;
+}
+#the_cryptoeconomy{
+background:  url(../promo_4_220_140.jpg) 0px 0px no-repeat;
+background-position: top center;
+background-size: contain;
+}
+#team_experience_blocks {
+  float: left;
+  width: 880px;
+  margin: 0px 40px;
+}
+.team_experience_block {
+  margin: 80px 40px 0;
+  width: 360px;
+  height: 103px;
+}
+
+#seamless_shopping_inner_container h2 {
+  margin-bottom: 100px;
+}
+/*#seamless_shopping_pic {
+  background: url(../seamless1.png) no-repeat;
+  background-size: contain;  
+}*/
+
+#roadmap_line{
+  position: absolute;
+  width: 479px;
+  height: 1264px;
+  border-right: 2px dashed #2b98eb;
+  top: 10px;
+}
+#roadmap_start_point{
+  z-index: 2;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 460px;
+  background: white;
+  border-radius: 40px;
+}
+#roadmap_point_1, #roadmap_point_2, #roadmap_point_3, #roadmap_point_4, #roadmap_point_5, #roadmap_point_6, #roadmap_point_7{
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 468px;
+  background: #104367;
+  border-radius: 12px;
+  z-index: 2;
+}
+#roadmap_point_1{
+  top: 160px;
+  background: #2b98eb;
+}
+#roadmap_point_2{
+  top: 320px;
+  background: #2b98eb;
+}
+#roadmap_point_3{
+  top: 480px;
+}
+#roadmap_point_4{
+  top: 640px;
+}
+#roadmap_point_5{
+  top: 800px;
+}
+#roadmap_point_6{
+  top: 960px;
+}
+#roadmap_point_7{
+  top: 1120px;
+}
+.roadmap_point_text_year{
+  font-size: 112px;
+}
+#roadmap_point_1_text_block, #roadmap_point_2_text_block, #roadmap_point_3_text_block, #roadmap_point_4_text_block, #roadmap_point_5_text_block, #roadmap_point_6_text_block, #roadmap_point_7_text_block {
+  position: absolute;
+  width: 320px;
+  color: white;
+  font-size: 34px;
+}
+#roadmap_point_1_text_block{
+  right: 490px;
+  top: 52px;
+}
+#roadmap_point_2_text_block{
+  left: 560px;
+  top: 220px;
+}
+#roadmap_point_3_text_block{
+  right: 490px;
+  top: 380px;
+}
+#roadmap_point_4_text_block{
+  left: 560px;
+  top: 540px;
+}
+#roadmap_point_5_text_block{
+  right: 490px;
+  top: 700px
+}
+#roadmap_point_6_text_block{
+  left: 560px;
+  top: 860px;
+}
+#roadmap_point_7_text_block{
+  right: 490px;
+  top: 1020px;
+}
+#roadmap_end_point{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 1264px;
+  left: 440px;
+  background: white url(../tick.svg) no-repeat;
+  background-size: 40px 40px;
+  background-position: center center;
+  border-radius: 40px;
+  z-index: 2;
+}
+#team_exp_blocks {
+  margin: 40px 40px 100px;
+  height: auto;
+}
+.team_exp_block {
+  margin: 40px 0 0;
+  width: 880px;
+  height: auto;
+}
+.team_exp_block_head, .team_exp_block_txt {
+  width: 880px;
+  font-size: 48px;
+  height: auto;
+}
+#team_exp_coll {
+  width: 822px;
+  height: 454px;
+  margin: 0 69px;
+}
+
+
+#email_subscription_block {
+  font-size: 48px;
+  margin-top: 140px;
+}
+#mc_embed_signup {
+  margin: 20px 0 40px;
+}
+#mce_email {
+  font-size: 34px;
+  border: none;
+  width: 495px;
+  padding: 0 15px;
+  height: 78px;
+  line-height: 78px;
+  /*margin: 22px 20px 0px 260px;*/
+  text-align: center;
+  background-color: white;
+  border-radius: 6px;
+  color: #333333;
+}
+#mc_embedded_subscribe {
+  padding: 0;
+  height: 80px;
+  line-height: 80px;
+  width: 315px;
+  border: none;
+  text-align: center;
+  background-color: #3BB3F2;
+  border-radius: 6px;
+  color: white;
+  margin: 0 0 0 30px;
+  font-size: 34px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+#email_subscription_container_wrapper {
+  padding: 0 0 80px;
+}
+
+#andrey_text, #team_experience_text, #seamless_shopping_text  {
+  width: 880px;
+  font-size: 48px;
+  padding: 0 40px 40px;
+}
+
+#seamless_shopping_text {
+  padding: 0 40px 60px;
+}
+
+/*.accompl_video {
+  width: 440px;
+  height: 247px;
+  margin: 0 0 0 30px;
+}
+#video_3 {
+  margin: 0 30px 0 20px;
+  width: 672px;
+  height: 247px;
+}*/
+
+#thermometerSoftCapSuccess {
+  width: 32px;
+  height: 32px;
+  float: left;
+  background: url(../tick_green.svg) no-repeat;
+  background-size: 32px 32px;
+  background-position: center center;
+  margin: 12px 12px 0 0;
+}
+  
+#our_video_container, #core_technology_partners_container {
+  width: 960px;
+}
+
+#core_technology_partners_blocks {
+  margin: 0 0 40px;
+}
+.core_technology_partner_block {
+  width: 900px;
+  margin: 80px 30px 0;
+  text-align: left;
+}
+.core_technology_partner_block:first-child {
+  width: 900px;
+  margin: 80px 30px 0;
+  text-align: left;
+}
+.core_technology_partner_logo, .core_technology_partner_name, .core_technology_partner_title, .core_technology_partner_link, .core_technology_partner_video {
+  float: left;
+  width: 450px;
+}
+.core_technology_partner_logo {
+  float: right;
+  width: 400px;
+  height: 110px;
+  margin: 0 0 0 50px;
+}
+.core_technology_partner_logo.countbox {
+  background: url(../countbox_logo.png) no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.core_technology_partner_logo.addreality {
+  background: url(../addreality_logo.png) no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.core_technology_partner_logo.iamrobotics {
+  background: url(../iamrobotics_logo.svg) no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.core_technology_partner_name {
+  font-size: 38px;
+}
+.core_technology_partner_title {
+  margin: 0;
+  font-size: 38px;
+}
+.core_technology_partner_link {
+  margin: 14px 0 0;
+}
+.core_technology_partner_link a {
+  font-size: 34px;
+}
+
+#brett_token_info_blocks {
+  width: 480px;
+  margin: 40px 0 0;
+}
+.brett_token_info_block {
+  width: 480px;
+  margin: 40px 0 0;
+}
+.brett_token_info_block_name {
+  font-size: 34px;
+}
+.brett_token_info_block_value {
+  font-size: 20px;
+}
+#brett_token_info_code {
+  width: 480px;
+}
+#brett_token_info_code iframe {
+  /*height: 220px;*/
+}
+.rett_text {
+  font-size: 24px;
+}
+
+
+
+
+
+
+/*================*/
+}
+
+
+
+
+
+
+
+@media all and (max-width: 768px) {
+#benefits_eiracube_logo{
+  width: 328px;
+  top: 144px;
+  background-size: contain;
+}
+#benefits_owners{
+  top: 120px;
+  left: -30px;
+  width: 40%;
+}
+#benefits_consumers{
+  top: 120px;
+  width: 40%;
+  left: 360px;
+}
+#benefits_merchants{
+  left: 0px;
+  top: 480px;
+  width: 100%;
+}
+}
+
+@media all and (max-width: 640px) {
+.benefits_block{
+  font-size: 18px;
+}
+#benefits_owners{
+  top: 105px;
+  left: 15px;
+  width: 30%;
+}
+#benefits_consumers{
+  top: 105px;
+  width: 30%;
+  left: 310px;
+}
+#benefits_merchants{
+  left: 48px;
+  top: 480px;
+  width: 80%;
+}
+.our_strength_block {
+  width: 480px;
+}
+#block_with_ratings {
+  width: 480px;
+  margin: 0;
+}
+#main_text_block, #change_language_container {
+  width: 480px;
+}
+#social_icons {
+  width: 440px;
+}
+.rating_mini_block {
+  margin: 0 12px 0 0;
+}
+
+
+
+
+
+
+}

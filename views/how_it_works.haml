@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    / %script{:async => "", :crossorigin => "anonymous", :src => "//player.h-cdn.com/loader.js?customer=hc_78903d8c"}
+    %script{:src => "//player2.h-cdn.com/hola_player.js?customer=hc_78903d8c"}
+    :css
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+  %body    
+    %video.video-js.vjs-default-skin#youtube_video_big_block{:controls => "", :width => "560", :height => "315"}
+      %source{:src => "/how_it_works.mp4#t=0.5", :type => "video/mp4"}
+
+    :javascript
+      window.hola_player()

@@ -1,0 +1,4 @@
+public/andrey_stryukov.mp4 filter=lfs diff=lfs merge=lfs -text
+public/video_3.mp4 filter=lfs diff=lfs merge=lfs -text
+public/how_it_works.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
